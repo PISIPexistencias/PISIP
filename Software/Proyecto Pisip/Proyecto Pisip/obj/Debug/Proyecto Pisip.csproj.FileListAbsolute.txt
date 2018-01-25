@@ -1,0 +1,35 @@
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\bin\Debug\Proyecto Pisip.exe.config
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\bin\Debug\Proyecto Pisip.exe
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\bin\Debug\Proyecto Pisip.pdb
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.csprojResolveAssemblyReference.cache
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Login.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Menu_principal.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Properties.Resources.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Registro_clientes.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.csproj.GenerateResource.Cache
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.exe
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.pdb
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Actualizar_clientes.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Actualizar_productos.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Actualizar_proveedor.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Registro_productos.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Registro_proveedor.resources
+C:\Users\Raul\Desktop\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Ventas.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\bin\Debug\Proyecto Pisip.exe.config
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.exe
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.pdb
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\bin\Debug\Proyecto Pisip.exe
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\bin\Debug\Proyecto Pisip.pdb
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\bin\Debug\MySql.Data.dll
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.csprojResolveAssemblyReference.cache
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Actualizar_clientes.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Actualizar_productos.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Actualizar_proveedor.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Login.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Menu_principal.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Properties.Resources.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Registro_clientes.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Registro_productos.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Registro_proveedor.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Ventas.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\PISIPExistencias\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto Pisip.csproj.GenerateResource.Cache
