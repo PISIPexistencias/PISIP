@@ -1,0 +1,71 @@
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias
+$ git init
+Initialized empty Git repository in C:/Users/rtorres/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias/.git/
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git remote add origin https://github.com/PISIPexistencias/PISIP.git
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Isr          ael/Septimo/Ingenieria de software II/PISIPExistencias
+$ git remote add origin https://github.com/PISIPexistencias/PISIP.git
+fatal: Not a git repository (or any of the parent directories): .git
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Isr          ael/Septimo/Ingenieria de software II/PISIPExistencias
+$ git remote add origin https://github.com/PISIPexistencias/PISIP.git
+fatal: Not a git repository (or any of the parent directories): .git
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias
+$ git init
+Initialized empty Git repository in C:/Users/rtorres/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias/.git/
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git remote add origin https://github.com/PISIPexistencias/PISIP.git
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git remote -v
+origin  https://github.com/PISIPexistencias/PISIP.git (fetch)
+origin  https://github.com/PISIPexistencias/PISIP.git (push)
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Documentacion/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git add .
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Documentacion/Prototipo/PrototipoInterfaz.pdf
+
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git commit -m "se anade prototipos a la carpeta documentacion del proyecto"
+[master (root-commit) 0436ce8] se anade prototipos a la carpeta documentacion del proyecto
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Documentacion/Prototipo/PrototipoInterfaz.pdf
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 132.62 KiB | 8.29 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/PISIPexistencias/PISIP.git
+ * [new branch]      master -> master
+
+rtorres@RT-HPDesarrollo MINGW64 ~/Documents/documento personales/Universidad Israel/Septimo/Ingenieria de software II/PISIPExistencias (master)
