@@ -44,6 +44,9 @@
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -111,16 +114,18 @@
             // 
             // txtcodigo
             // 
+            this.txtcodigo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtcodigo.Enabled = false;
             this.txtcodigo.Location = new System.Drawing.Point(144, 23);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(159, 20);
+            this.txtcodigo.Size = new System.Drawing.Size(38, 20);
             this.txtcodigo.TabIndex = 7;
             // 
             // txtcedula
             // 
             this.txtcedula.Location = new System.Drawing.Point(144, 52);
             this.txtcedula.Name = "txtcedula";
-            this.txtcedula.Size = new System.Drawing.Size(159, 20);
+            this.txtcedula.Size = new System.Drawing.Size(72, 20);
             this.txtcedula.TabIndex = 8;
             // 
             // txtapellidos
@@ -141,7 +146,7 @@
             // 
             this.txtmail.Location = new System.Drawing.Point(144, 143);
             this.txtmail.Name = "txtmail";
-            this.txtmail.Size = new System.Drawing.Size(159, 20);
+            this.txtmail.Size = new System.Drawing.Size(98, 20);
             this.txtmail.TabIndex = 11;
             // 
             // txtdireccion
@@ -155,34 +160,52 @@
             // 
             this.txttelefono.Location = new System.Drawing.Point(144, 207);
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(159, 20);
+            this.txttelefono.Size = new System.Drawing.Size(72, 20);
             this.txttelefono.TabIndex = 13;
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(345, 76);
+            this.btnagregar.Location = new System.Drawing.Point(17, 64);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(75, 23);
             this.btnagregar.TabIndex = 14;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(345, 124);
+            this.btnsalir.Location = new System.Drawing.Point(17, 111);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(75, 23);
             this.btnsalir.TabIndex = 15;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(3, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(323, 234);
+            this.panel1.TabIndex = 16;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnsalir);
+            this.panel2.Controls.Add(this.btnagregar);
+            this.panel2.Location = new System.Drawing.Point(345, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(114, 234);
+            this.panel2.TabIndex = 17;
             // 
             // Registro_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 243);
-            this.Controls.Add(this.btnsalir);
-            this.Controls.Add(this.btnagregar);
+            this.ClientSize = new System.Drawing.Size(483, 260);
             this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.txtmail);
@@ -197,9 +220,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "Registro_clientes";
             this.Text = "Registro_clientes";
             this.Load += new System.EventHandler(this.Registro_clientes_Load);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +249,7 @@
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -32,7 +32,9 @@ namespace Proyecto_Pisip
                 if (conecta.AbrirConexion() == true)
                 {
                     ListaCliente(conecta.conexion, txt_ced_actualizar.Text, txt_ape_actualizar.Text, txt_nom_actualizar.Text);
+                    conecta.CerrarConexion();
                 }
+
                 
             }
             catch(MySql.Data.MySqlClient.MySqlException ex)
@@ -49,6 +51,43 @@ namespace Proyecto_Pisip
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (conecta.AbrirConexion() == true)
+                {
+                    ListaCliente(conecta.conexion, txt_ced_actualizar.Text, txt_ape_actualizar.Text, txt_nom_actualizar.Text);
+                    conecta.CerrarConexion();
+                }
+
+                
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            Registro_clientes registraCliente = new Registro_clientes();
+           
+            registraCliente.Show();
+
+        }
+
+        private void Actualizar_clientes_Activated(object sender, EventArgs e)
+        {
+            //MessageBox.Show("activo");
         }
     }
 }

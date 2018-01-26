@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Proyecto_Pisip.Clases
 {
@@ -29,11 +30,28 @@ namespace Proyecto_Pisip.Clases
             this.Direccion_Cliente = Cdireccion;
             this.Telefono_Cliente = Ctelefono;
         }
+        public static int AgregarCliente(MySqlConnection conexion, Cliente pCliente)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandText = "PA_Insertar_Cliente";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = conexion;
+
+            comando.Parameters.AddWithValue("@cedula_cli", pCliente.Cedula_Cliente);
+            comando.Parameters.AddWithValue("@apellidos_cli", pCliente.Apellidos_Cliente);
+            comando.Parameters.AddWithValue("@nombres_cli", pCliente.Nombres_Cliente);
+            comando.Parameters.AddWithValue("@correo_cli", pCliente.Correo_Cliente);
+            comando.Parameters.AddWithValue("@direccion_cli", pCliente.Direccion_Cliente);
+            comando.Parameters.AddWithValue("@telefono_cli", pCliente.Telefono_Cliente);
+            retorno=comando.ExecuteNonQuery();
+            return retorno;
+        }
 
         public static IList<Cliente> Busca_Cliente(MySqlConnection conexion, string B_Cedula, string B_Apellidos, String B_Nombres)
         {
             List<Cliente> lista = new List<Cliente>();
-            MySqlCommand consulta = new MySqlCommand(string.Format("select ID_CLIENTE, CEDULA, APELLIDOS, NOMBRES, CORREO_CLIENTE, DIRECCION_CLIENTE, TELEFONO_CLIENTE from cliente where CEDULA like('%(0)%') and APELLIDOS like('%(1)%') and NOMBRES like('%(2)%')",B_Cedula,B_Apellidos,B_Nombres), conexion );
+            MySqlCommand consulta = new MySqlCommand("select ID_CLIENTE, CEDULA, APELLIDOS, NOMBRES, CORREO_CLIENTE, DIRECCION_CLIENTE, TELEFONO_CLIENTE from cliente where CEDULA LIKE ('%" + B_Cedula + "%') AND APELLIDOS LIKE ('%" + B_Apellidos + "%') AND  NOMBRES LIKE ('%" + B_Nombres + "%') ", conexion );
             MySqlDataReader ejecuta = consulta.ExecuteReader();
             while (ejecuta.Read())
             {
