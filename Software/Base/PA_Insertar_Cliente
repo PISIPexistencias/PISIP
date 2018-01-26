@@ -1,0 +1,18 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `PA_Insertar_Cliente`(
+in cedula_cli varchar(10),
+in apellidos_cli varchar(50),
+in nombres_cli varchar(50),
+in correo_cli varchar(30),
+in direccion_cli varchar(50),
+in telefono_cli decimal(10)
+)
+BEGIN
+insert cliente (CEDULA, APELLIDOS,NOMBRES, CORREO_CLIENTE,DIRECCION_CLIENTE,TELEFONO_CLIENTE)
+ values (cedula_cli,apellidos_cli,apellidos_cli,correo_cli,direccion_cli,telefono_cli);
+END
