@@ -80,7 +80,7 @@ namespace Proyecto_Pisip
         private void btnnuevo_Click(object sender, EventArgs e)
         {
             Registro_clientes registraCliente = new Registro_clientes();
-           
+            registraCliente.lblAccion.Text = "I";
             registraCliente.Show();
 
         }
@@ -88,6 +88,31 @@ namespace Proyecto_Pisip
         private void Actualizar_clientes_Activated(object sender, EventArgs e)
         {
             //MessageBox.Show("activo");
+        }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvCliente.SelectedRows.Count == 1)
+                {
+                    Registro_clientes registraCli = new Registro_clientes();
+                    registraCli.txtcodigo.Text= Convert.ToString( dgvCliente.CurrentRow.Cells[0].Value);
+                    registraCli.lblAccion.Text = "M";
+                    //this.Hide();
+                    registraCli.Show();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un registro");
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

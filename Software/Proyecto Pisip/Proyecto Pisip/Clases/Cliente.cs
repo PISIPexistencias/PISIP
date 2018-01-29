@@ -48,6 +48,25 @@ namespace Proyecto_Pisip.Clases
             return retorno;
         }
 
+        public static int ModificarCliente(MySqlConnection conexion, Cliente pCliente)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandText = "PA_Actualizar_Cliente";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = conexion;
+
+            comando.Parameters.AddWithValue("@cod_cliente", pCliente.Id_Cliente);
+            comando.Parameters.AddWithValue("@cedula_cli", pCliente.Cedula_Cliente);
+            comando.Parameters.AddWithValue("@apellidos_cli", pCliente.Apellidos_Cliente);
+            comando.Parameters.AddWithValue("@nombres_cli", pCliente.Nombres_Cliente);
+            comando.Parameters.AddWithValue("@correo_cli", pCliente.Correo_Cliente);
+            comando.Parameters.AddWithValue("@direccion_cli", pCliente.Direccion_Cliente);
+            comando.Parameters.AddWithValue("@telefono_cli", pCliente.Telefono_Cliente);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
         public static IList<Cliente> Busca_Cliente(MySqlConnection conexion, string B_Cedula, string B_Apellidos, String B_Nombres)
         {
             List<Cliente> lista = new List<Cliente>();
@@ -67,6 +86,31 @@ namespace Proyecto_Pisip.Clases
                 lista.Add(Bcliente);
             }
             return lista;
+        }
+        public static Cliente ObtenerCliente(MySqlConnection conexion, int pIdCliente)
+        {
+            Cliente pCliente = new Cliente();
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandText = "PA_Obtener_Cliente";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = conexion;
+
+            comando.Parameters.AddWithValue("@cod_cliente", pIdCliente);
+
+            MySqlDataReader ejecuta = comando.ExecuteReader();
+            while (ejecuta.Read())
+            {
+                pCliente.Id_Cliente = ejecuta.GetInt32(0);
+                pCliente.Cedula_Cliente= ejecuta.GetString(1);
+                pCliente.Apellidos_Cliente = ejecuta.GetString(2);
+                pCliente.Nombres_Cliente = ejecuta.GetString(3);
+                pCliente.Correo_Cliente = ejecuta.GetString(4);
+                pCliente.Direccion_Cliente = ejecuta.GetString(5);
+                pCliente.Telefono_Cliente = ejecuta.GetDouble(6);
+
+                
+            }
+            return pCliente;
         }
     }
 }
