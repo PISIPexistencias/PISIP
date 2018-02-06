@@ -35,7 +35,7 @@ namespace Proyecto_Pisip
                     txtdireccion.Clear();
                     txttelefono.Clear();
                 }
-                else if (lblAccion.Text == "M")
+                else if ((lblAccion.Text == "M") || (lblAccion.Text == "E"))
                 {
                     if (conecta.AbrirConexion() == true)
                     {
@@ -85,6 +85,8 @@ namespace Proyecto_Pisip
 
                         case "M": resultado = Clases.Cliente.ModificarCliente(conecta.conexion, pCliente); break;
 
+                        case "E": resultado = Clases.Cliente.EliminarCliente (conecta.conexion, pCliente.Id_Cliente); break;
+
                     }
 
                     
@@ -96,6 +98,9 @@ namespace Proyecto_Pisip
                         }else if (lblAccion.Text == "M")
                         {
                             MessageBox.Show("Registro Actualizado exitosamente");
+                        }else if (lblAccion.Text == "E")
+                        {
+                            MessageBox.Show("Registro Eliminado exitosamente");
                         }
                         
                         

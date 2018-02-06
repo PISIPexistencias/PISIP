@@ -112,5 +112,17 @@ namespace Proyecto_Pisip.Clases
             }
             return pCliente;
         }
+        public static int EliminarCliente(MySqlConnection conexion, int pcodCliente)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandText = "PA_EliminarCliente";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = conexion;
+
+            comando.Parameters.AddWithValue("@cod_cliente", pcodCliente);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
     }
 }

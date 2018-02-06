@@ -53,6 +53,12 @@
     <Compile Include="Actualizar clientes.Designer.cs">
       <DependentUpon>Actualizar clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Actualizar empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actualizar empleado.Designer.cs">
+      <DependentUpon>Actualizar empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Actualizar productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,7 @@
     </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +93,12 @@
     </Compile>
     <Compile Include="Registro clientes.Designer.cs">
       <DependentUpon>Registro clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro Empleados.Designer.cs">
+      <DependentUpon>Registro Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Registro productos.cs">
       <SubType>Form</SubType>
@@ -107,6 +120,9 @@
     </Compile>
     <EmbeddedResource Include="Actualizar clientes.resx">
       <DependentUpon>Actualizar clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actualizar empleado.resx">
+      <DependentUpon>Actualizar empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Actualizar productos.resx">
       <DependentUpon>Actualizar productos.cs</DependentUpon>
@@ -131,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="Registro clientes.resx">
       <DependentUpon>Registro clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro Empleados.resx">
+      <DependentUpon>Registro Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro productos.resx">
       <DependentUpon>Registro productos.cs</DependentUpon>

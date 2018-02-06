@@ -109,9 +109,34 @@ namespace Proyecto_Pisip
                     MessageBox.Show("Seleccione un registro");
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvCliente.SelectedRows.Count == 1)
+                {
+                    Registro_clientes registraCli = new Registro_clientes();
+                    registraCli.txtcodigo.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[0].Value);
+                    registraCli.lblAccion.Text = "E";
+                    //this.Hide();
+                    registraCli.Show();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un registro");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

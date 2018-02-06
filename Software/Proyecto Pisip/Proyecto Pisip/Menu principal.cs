@@ -27,5 +27,11 @@ namespace Proyecto_Pisip
             Actualizar_clientes act_cliente = new Actualizar_clientes();
             act_cliente.Show();
         }
+
+        private void ingresoMantenimientoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Actualizar_empleado act_empleado = new Actualizar_empleado();
+            act_empleado.Show();
+        }
     }
 }
