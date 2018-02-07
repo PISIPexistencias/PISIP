@@ -42,7 +42,8 @@ namespace Proyecto_Pisip
                     {
                         EmpleadoSeleccionado = Clases.Empleado.ObtenerEmpleado(conecta.conexion, Convert.ToInt32(txtcodigo.Text));
                         txtcedula.Text = EmpleadoSeleccionado.Cedula_Empleado;
-                       txtcodBodega.Text = Convert.ToString( EmpleadoSeleccionado.Cod_Bodega);
+                        txtcodBodega.Text = Convert.ToString( EmpleadoSeleccionado.Cod_Bodega);
+                        txtsucursal.Text = EmpleadoSeleccionado.Sucursal_Bodega;
                         txtapellidos.Text = EmpleadoSeleccionado.Apellidos_Empleado;
                         txtnombres.Text = EmpleadoSeleccionado.Nombres_Empleado;
                         txtcargo.Text = EmpleadoSeleccionado.Cargo_Empleado;
@@ -68,7 +69,16 @@ namespace Proyecto_Pisip
                 {
                     int resultado = 0;
                     Clases.Empleado pEmpleado = new Clases.Empleado();
-                    pEmpleado.Cod_Bodega = Convert.ToInt32(txtcodigo.Text);
+                    if (lblAccion.Text == "I")
+                    {
+                        pEmpleado.Cod_Empleado = 0;
+                    }
+                    else
+                    {
+                        pEmpleado.Cod_Empleado = Convert.ToInt32(txtcodigo.Text);
+                    }
+                    //pEmpleado.Cod_Empleado =Convert.ToInt32(txtcodigo.Text);
+                    pEmpleado.Cod_Bodega = Convert.ToInt32(txtcodBodega.Text);
                     pEmpleado.Cedula_Empleado = txtcedula.Text;
                     pEmpleado.Apellidos_Empleado = txtapellidos.Text;
                     pEmpleado.Nombres_Empleado = txtnombres.Text;
@@ -119,6 +129,7 @@ namespace Proyecto_Pisip
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Dispose();
         }
     }
 }

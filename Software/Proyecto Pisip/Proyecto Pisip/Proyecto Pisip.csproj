@@ -74,6 +74,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

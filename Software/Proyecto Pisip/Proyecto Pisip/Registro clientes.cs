@@ -69,7 +69,15 @@ namespace Proyecto_Pisip
                 {
                     int resultado=0;
                     Clases.Cliente pCliente = new Clases.Cliente();
-                    pCliente.Id_Cliente = Convert.ToInt32(txtcodigo.Text);
+                    if (lblAccion.Text == "I")
+                    {
+                        pCliente.Id_Cliente = 0;
+                    }
+                    else
+                    {
+                        pCliente.Id_Cliente = Convert.ToInt32(txtcodigo.Text);
+                    }
+                    
                     pCliente.Cedula_Cliente = txtcedula.Text;
                     pCliente.Apellidos_Cliente = txtapellidos.Text;
                     pCliente.Nombres_Cliente = txtnombres.Text;

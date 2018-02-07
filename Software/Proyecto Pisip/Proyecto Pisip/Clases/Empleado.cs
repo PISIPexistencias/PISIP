@@ -77,8 +77,8 @@ namespace Proyecto_Pisip.Clases
             while (ejecuta.Read())
             {
                 Empleado Bempleado = new Empleado();
-                Bempleado.Cod_Empleado = ejecuta.GetInt16(0);
-                Bempleado.Cod_Bodega = ejecuta.GetInt16(1);
+                Bempleado.Cod_Empleado = ejecuta.GetInt32(0);
+                Bempleado.Cod_Bodega = ejecuta.GetInt32(1);
                 Bempleado.Sucursal_Bodega = ejecuta.GetString(2);
                 Bempleado.Cedula_Empleado = ejecuta.GetString(3);
                 Bempleado.Apellidos_Empleado = ejecuta.GetString(4);

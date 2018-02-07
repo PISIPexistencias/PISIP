@@ -202,6 +202,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Actualizar_empleado";
             this.Text = "Actualizar_empleado";
             this.Load += new System.EventHandler(this.Actualizar_empleado_Load);
