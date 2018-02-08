@@ -38,16 +38,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.Button();
-            this.txtestado = new System.Windows.Forms.TextBox();
             this.txtsucursal = new System.Windows.Forms.TextBox();
             this.txtcargo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtcodBodega = new System.Windows.Forms.TextBox();
             this.lblAccion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtcodBodega = new System.Windows.Forms.TextBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -138,13 +138,6 @@
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // txtestado
-            // 
-            this.txtestado.Location = new System.Drawing.Point(153, 207);
-            this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(52, 20);
-            this.txtestado.TabIndex = 31;
-            // 
             // txtsucursal
             // 
             this.txtsucursal.Location = new System.Drawing.Point(140, 41);
@@ -189,6 +182,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmbEstado);
             this.panel1.Controls.Add(this.txtcodBodega);
             this.panel1.Controls.Add(this.lblAccion);
             this.panel1.Controls.Add(this.label5);
@@ -205,6 +199,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 234);
             this.panel1.TabIndex = 32;
+            // 
+            // txtcodBodega
+            // 
+            this.txtcodBodega.Location = new System.Drawing.Point(246, 41);
+            this.txtcodBodega.Name = "txtcodBodega";
+            this.txtcodBodega.Size = new System.Drawing.Size(45, 20);
+            this.txtcodBodega.TabIndex = 31;
             // 
             // lblAccion
             // 
@@ -225,12 +226,18 @@
             this.panel2.Size = new System.Drawing.Size(114, 234);
             this.panel2.TabIndex = 33;
             // 
-            // txtcodBodega
+            // cmbEstado
             // 
-            this.txtcodBodega.Location = new System.Drawing.Point(246, 41);
-            this.txtcodBodega.Name = "txtcodBodega";
-            this.txtcodBodega.Size = new System.Drawing.Size(45, 20);
-            this.txtcodBodega.TabIndex = 31;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(140, 191);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(84, 21);
+            this.cmbEstado.TabIndex = 32;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Registro_Empleados
             // 
@@ -238,7 +245,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 280);
             this.Controls.Add(this.txtcodigo);
-            this.Controls.Add(this.txtestado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -266,7 +272,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnsalir;
-        private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.TextBox txtsucursal;
         private System.Windows.Forms.TextBox txtcargo;
         private System.Windows.Forms.Label label7;
@@ -276,5 +281,6 @@
         public System.Windows.Forms.Label lblAccion;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtcodBodega;
+        private System.Windows.Forms.ComboBox cmbEstado;
     }
 }

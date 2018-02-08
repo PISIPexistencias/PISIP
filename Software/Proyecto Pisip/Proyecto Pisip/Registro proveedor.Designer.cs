@@ -43,10 +43,10 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtFono = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblAccion = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblAccion = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -172,7 +172,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtEstado);
+            this.panel1.Controls.Add(this.cmbEstado);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lblAccion);
             this.panel1.Location = new System.Drawing.Point(13, 13);
@@ -180,14 +180,14 @@
             this.panel1.Size = new System.Drawing.Size(270, 222);
             this.panel1.TabIndex = 14;
             // 
-            // panel2
+            // label7
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnAceptar);
-            this.panel2.Location = new System.Drawing.Point(290, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(122, 222);
-            this.panel2.TabIndex = 15;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(26, 189);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Estado";
             // 
             // lblAccion
             // 
@@ -198,21 +198,26 @@
             this.lblAccion.TabIndex = 1;
             this.lblAccion.Text = "label8";
             // 
-            // txtEstado
+            // panel2
             // 
-            this.txtEstado.Location = new System.Drawing.Point(95, 186);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(59, 20);
-            this.txtEstado.TabIndex = 15;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnAceptar);
+            this.panel2.Location = new System.Drawing.Point(290, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(122, 222);
+            this.panel2.TabIndex = 15;
             // 
-            // label7
+            // cmbEstado
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Estado";
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(95, 186);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(84, 21);
+            this.cmbEstado.TabIndex = 33;
             // 
             // Registro_proveedor
             // 
@@ -265,7 +270,7 @@
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox txtCodigo;
         public System.Windows.Forms.Label lblAccion;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbEstado;
     }
 }

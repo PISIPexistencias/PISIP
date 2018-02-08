@@ -39,5 +39,16 @@ namespace Proyecto_Pisip
             Actualizar_proveedor act_proveedor = new Actualizar_proveedor();
             act_proveedor.Show();
         }
+
+        private void ingresoMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ingresoMantenimientoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Actualizar_Usuario act_usuario = new Actualizar_Usuario();
+            act_usuario.Show();
+        }
     }
 }

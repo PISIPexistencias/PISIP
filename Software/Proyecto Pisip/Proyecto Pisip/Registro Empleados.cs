@@ -33,7 +33,7 @@ namespace Proyecto_Pisip
                     txtapellidos.Clear();
                     txtnombres.Clear();
                     txtcargo.Clear();
-                    txtestado.Clear();
+                    //txtestado.Clear();
                     
                 }
                 else if ((lblAccion.Text == "M") || (lblAccion.Text == "E"))
@@ -47,7 +47,16 @@ namespace Proyecto_Pisip
                         txtapellidos.Text = EmpleadoSeleccionado.Apellidos_Empleado;
                         txtnombres.Text = EmpleadoSeleccionado.Nombres_Empleado;
                         txtcargo.Text = EmpleadoSeleccionado.Cargo_Empleado;
-                        txtestado.Text = Convert.ToString( EmpleadoSeleccionado.Estado_empleado);
+                        //txtestado.Text = Convert.ToString( EmpleadoSeleccionado.Estado_empleado);
+                        if (EmpleadoSeleccionado.Estado_empleado == 0)
+                        {
+                            cmbEstado.Text = "Activo";
+                        }
+                        else
+                        {
+                            cmbEstado.Text = "Inactivo";
+                        }
+                        
                         conecta.CerrarConexion();
                     }
 
@@ -83,7 +92,15 @@ namespace Proyecto_Pisip
                     pEmpleado.Apellidos_Empleado = txtapellidos.Text;
                     pEmpleado.Nombres_Empleado = txtnombres.Text;
                     pEmpleado.Cargo_Empleado = txtcargo.Text;
-                    pEmpleado.Estado_empleado = Convert.ToInt16( txtestado.Text);
+                    //pEmpleado.Estado_empleado = Convert.ToInt16(txtestado.Text);
+                    if (cmbEstado.Text == "Activo")
+                    {
+                        pEmpleado.Estado_empleado = 0;
+                    }
+                    else
+                    {
+                        pEmpleado.Estado_empleado = 1;
+                    }
 
                     switch (lblAccion.Text)
                     {
@@ -130,6 +147,11 @@ namespace Proyecto_Pisip
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

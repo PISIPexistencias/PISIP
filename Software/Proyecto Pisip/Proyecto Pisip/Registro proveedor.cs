@@ -32,7 +32,7 @@ namespace Proyecto_Pisip
                     txtDireccion.Clear();
                     txtContacto.Clear();
                     txtFono.Clear();
-                    txtEstado.Clear();
+                    //txtEstado.Clear();
 
                 }
                 else if ((lblAccion.Text == "M") || (lblAccion.Text == "E"))
@@ -45,7 +45,15 @@ namespace Proyecto_Pisip
                         txtDireccion.Text = ProveedorSeleccionado.Direccion_Proveedor;
                         txtFono.Text = ProveedorSeleccionado.Fono_Proveedor;
                         txtContacto.Text = ProveedorSeleccionado.Contacto_Proveedor;
-                        txtEstado.Text = Convert.ToString( ProveedorSeleccionado.Estado_Proveedor);
+                        //txtEstado.Text = Convert.ToString( ProveedorSeleccionado.Estado_Proveedor);
+                        if (ProveedorSeleccionado.Estado_Proveedor == 0)
+                        {
+                            cmbEstado.Text = "Activo";
+                        }
+                        else
+                        {
+                            cmbEstado.Text = "Inactivo";
+                        }
                         conecta.CerrarConexion();
                     }
 
@@ -81,7 +89,15 @@ namespace Proyecto_Pisip
                     pProveedor.Direccion_Proveedor = txtProveedor.Text;
                     pProveedor.Fono_Proveedor = txtFono.Text;
                     pProveedor.Contacto_Proveedor = txtContacto.Text;
-                    pProveedor.Estado_Proveedor = Convert.ToInt16(txtEstado.Text);
+                    //pProveedor.Estado_Proveedor = Convert.ToInt16(txtEstado.Text);
+                    if (cmbEstado.Text == "Activo")
+                    {
+                        pProveedor.Estado_Proveedor = 0;
+                    }
+                    else
+                    {
+                        pProveedor.Estado_Proveedor = 1;
+                    }
 
                     switch (lblAccion.Text)
                     {

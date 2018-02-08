@@ -72,7 +72,7 @@ namespace Proyecto_Pisip.Clases
         public static IList<Empleado> Busca_Empleado(MySqlConnection conexion, string B_Cedula, string B_Apellidos, String B_Nombres)
         {
             List<Empleado> listaEmp = new List<Empleado>();
-            MySqlCommand consulta = new MySqlCommand("select CODIGO_EMPLEADO,e.CODIGO_BODEGA,b.SUCURSAL,CEDULA_EMPLEADO,APELLIDOS_EMPLEADO,NOMBRES_EMPLEADO,CARGO_EMPLEADO,ESTADO_EMPLEADO from empleados e,Bodega b where e.CODIGO_BODEGA=b.CODIGO_BODEGA and ESTADO_EMPLEADO=0 and  CEDULA_EMPLEADO LIKE ('%" + B_Cedula + "%') AND APELLIDOS_EMPLEADO LIKE ('%" + B_Apellidos + "%') AND  NOMBRES_EMPLEADO LIKE ('%" + B_Nombres + "%') ", conexion);
+            MySqlCommand consulta = new MySqlCommand("select CODIGO_EMPLEADO,e.CODIGO_BODEGA,b.SUCURSAL,CEDULA_EMPLEADO,APELLIDOS_EMPLEADO,NOMBRES_EMPLEADO,CARGO_EMPLEADO,ESTADO_EMPLEADO from empleados e,Bodega b where e.CODIGO_BODEGA=b.CODIGO_BODEGA and  CEDULA_EMPLEADO LIKE ('%" + B_Cedula + "%') AND APELLIDOS_EMPLEADO LIKE ('%" + B_Apellidos + "%') AND  NOMBRES_EMPLEADO LIKE ('%" + B_Nombres + "%') ", conexion);
             MySqlDataReader ejecuta = consulta.ExecuteReader();
             while (ejecuta.Read())
             {

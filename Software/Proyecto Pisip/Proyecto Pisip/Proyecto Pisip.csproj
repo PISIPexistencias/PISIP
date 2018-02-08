@@ -71,10 +71,18 @@
     <Compile Include="Actualizar proveedor.Designer.cs">
       <DependentUpon>Actualizar proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Actualizar Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actualizar Usuario.Designer.cs">
+      <DependentUpon>Actualizar Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Proveedor.cs" />
+    <Compile Include="Clases\Roles.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +121,12 @@
     <Compile Include="Registro proveedor.Designer.cs">
       <DependentUpon>Registro proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registro Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro Usuario.Designer.cs">
+      <DependentUpon>Registro Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Actualizar proveedor.resx">
       <DependentUpon>Actualizar proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actualizar Usuario.resx">
+      <DependentUpon>Actualizar Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -157,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro proveedor.resx">
       <DependentUpon>Registro proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro Usuario.resx">
+      <DependentUpon>Registro Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
