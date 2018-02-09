@@ -87,9 +87,10 @@
             // 
             // btnBuscaEmpl
             // 
-            this.btnBuscaEmpl.Location = new System.Drawing.Point(132, 41);
+            this.btnBuscaEmpl.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnBuscaEmpl.Location = new System.Drawing.Point(132, 34);
             this.btnBuscaEmpl.Name = "btnBuscaEmpl";
-            this.btnBuscaEmpl.Size = new System.Drawing.Size(33, 23);
+            this.btnBuscaEmpl.Size = new System.Drawing.Size(33, 33);
             this.btnBuscaEmpl.TabIndex = 37;
             this.btnBuscaEmpl.Text = "...";
             this.btnBuscaEmpl.UseVisualStyleBackColor = true;

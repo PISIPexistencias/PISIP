@@ -44,10 +44,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.txtcodBodega = new System.Windows.Forms.TextBox();
             this.lblAccion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.btnBuscaEmpl = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -140,9 +141,11 @@
             // 
             // txtsucursal
             // 
+            this.txtsucursal.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtsucursal.Enabled = false;
             this.txtsucursal.Location = new System.Drawing.Point(140, 41);
             this.txtsucursal.Name = "txtsucursal";
-            this.txtsucursal.Size = new System.Drawing.Size(84, 20);
+            this.txtsucursal.Size = new System.Drawing.Size(99, 20);
             this.txtsucursal.TabIndex = 30;
             // 
             // txtcargo
@@ -182,6 +185,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnBuscaEmpl);
             this.panel1.Controls.Add(this.cmbEstado);
             this.panel1.Controls.Add(this.txtcodBodega);
             this.panel1.Controls.Add(this.lblAccion);
@@ -200,9 +204,24 @@
             this.panel1.Size = new System.Drawing.Size(323, 234);
             this.panel1.TabIndex = 32;
             // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(140, 191);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(84, 21);
+            this.cmbEstado.TabIndex = 32;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // txtcodBodega
             // 
-            this.txtcodBodega.Location = new System.Drawing.Point(246, 41);
+            this.txtcodBodega.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtcodBodega.Enabled = false;
+            this.txtcodBodega.Location = new System.Drawing.Point(89, 41);
             this.txtcodBodega.Name = "txtcodBodega";
             this.txtcodBodega.Size = new System.Drawing.Size(45, 20);
             this.txtcodBodega.TabIndex = 31;
@@ -226,18 +245,16 @@
             this.panel2.Size = new System.Drawing.Size(114, 234);
             this.panel2.TabIndex = 33;
             // 
-            // cmbEstado
+            // btnBuscaEmpl
             // 
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbEstado.Location = new System.Drawing.Point(140, 191);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(84, 21);
-            this.cmbEstado.TabIndex = 32;
-            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.btnBuscaEmpl.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnBuscaEmpl.Location = new System.Drawing.Point(245, 32);
+            this.btnBuscaEmpl.Name = "btnBuscaEmpl";
+            this.btnBuscaEmpl.Size = new System.Drawing.Size(33, 33);
+            this.btnBuscaEmpl.TabIndex = 38;
+            this.btnBuscaEmpl.Text = "...";
+            this.btnBuscaEmpl.UseVisualStyleBackColor = true;
+            this.btnBuscaEmpl.Click += new System.EventHandler(this.btnBuscaEmpl_Click);
             // 
             // Registro_Empleados
             // 
@@ -282,5 +299,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtcodBodega;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.Button btnBuscaEmpl;
     }
 }

@@ -153,5 +153,18 @@ namespace Proyecto_Pisip
         {
 
         }
+
+        private void btnBuscaEmpl_Click(object sender, EventArgs e)
+        {
+            Clases.Consulta_Bodega consultaBodega = new Clases.Consulta_Bodega();
+            consultaBodega.ShowDialog();
+            if (Convert.ToInt32(consultaBodega.dgvBodega.CurrentRow.Cells[0].Value) >= 0)
+            {
+                txtcodBodega.Text = Convert.ToString(consultaBodega.dgvBodega.CurrentRow.Cells[0].Value);
+                txtsucursal.Text = Convert.ToString(consultaBodega.dgvBodega.CurrentRow.Cells[1].Value);
+
+            }
+            consultaBodega.Dispose();
+        }
     }
 }

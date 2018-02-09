@@ -45,7 +45,7 @@ namespace Proyecto_Pisip
         }
         public void ListaCliente(MySqlConnection conectar, string Bcedula, string Bapellidos, string Bnombres )
         {
-            dgvCliente.DataSource = Clases.Cliente.Busca_Cliente(conectar, Bcedula, Bapellidos, Bnombres);
+            dgvClientes.DataSource = Clases.Cliente.Busca_Cliente(conectar, Bcedula, Bapellidos, Bnombres);
         }
 
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -94,10 +94,10 @@ namespace Proyecto_Pisip
         {
             try
             {
-                if (dgvCliente.SelectedRows.Count == 1)
+                if (dgvClientes.SelectedRows.Count == 1)
                 {
                     Registro_clientes registraCli = new Registro_clientes();
-                    registraCli.txtcodigo.Text= Convert.ToString( dgvCliente.CurrentRow.Cells[0].Value);
+                    registraCli.txtcodigo.Text= Convert.ToString(dgvClientes.CurrentRow.Cells[0].Value);
                     registraCli.lblAccion.Text = "M";
                     //this.Hide();
                     registraCli.Show();
@@ -119,10 +119,10 @@ namespace Proyecto_Pisip
         {
             try
             {
-                if (dgvCliente.SelectedRows.Count == 1)
+                if (dgvClientes.SelectedRows.Count == 1)
                 {
                     Registro_clientes registraCli = new Registro_clientes();
-                    registraCli.txtcodigo.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[0].Value);
+                    registraCli.txtcodigo.Text = Convert.ToString(dgvClientes.CurrentRow.Cells[0].Value);
                     registraCli.lblAccion.Text = "E";
                     //this.Hide();
                     registraCli.Show();
@@ -138,6 +138,11 @@ namespace Proyecto_Pisip
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

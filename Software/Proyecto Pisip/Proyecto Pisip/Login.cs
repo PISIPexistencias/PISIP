@@ -29,11 +29,11 @@ namespace Proyecto_Pisip
 
             if ((conecta.AbrirConexion()) == true)
             {
-                MySqlCommand comando = new MySqlCommand("select * FROM usuario where codigo_usuario='" + txtuser.Text + "' and clave_usuario='" + txtpass.Text + "' ", conecta.conexion);
+                MySqlCommand comando = new MySqlCommand("select CODIGO_USUARIO,CLAVE_USUARIO,APELLIDOS_EMPLEADO,NOMBRES_EMPLEADO FROM usuario u, empleados e where u.codigo_usuario= '" + txtuser.Text + "' and u.clave_usuario='" + txtpass.Text + "' and u.codigo_empleado = e.codigo_empleado ", conecta.conexion);
                 MySqlDataReader ejecuta = comando.ExecuteReader();
                 if (ejecuta.Read() == true)
                 {
-                    MessageBox.Show("Bienvenido " + ejecuta["codigo_usuario"]);
+                    MessageBox.Show("Bienvenido " + ejecuta["APELLIDOS_EMPLEADO"] + " " + ejecuta["NOMBRES_EMPLEADO"]);
                    
                     Menu_principal menu = new Menu_principal();
                     this.Hide();

@@ -56,5 +56,18 @@ namespace Proyecto_Pisip
             Actualizar_productos act_producto = new Actualizar_productos();
             act_producto.Show();
         }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventas venta = new Ventas();
+            venta.lblAccion.Text = "I";
+            venta.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
     }
 }

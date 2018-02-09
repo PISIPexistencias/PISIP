@@ -49,16 +49,16 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.dtpFechaCaducaProducto = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtnuevoStock = new System.Windows.Forms.TextBox();
+            this.lblAccion = new System.Windows.Forms.Label();
+            this.txtCodProvProducto = new System.Windows.Forms.TextBox();
+            this.txtcodBodProducto = new System.Windows.Forms.TextBox();
+            this.btnBuscaProveedor = new System.Windows.Forms.Button();
+            this.btnBuscaBodega = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.btnBuscaProveedor = new System.Windows.Forms.Button();
-            this.txtcodBodProducto = new System.Windows.Forms.TextBox();
-            this.txtCodProvProducto = new System.Windows.Forms.TextBox();
-            this.lblAccion = new System.Windows.Forms.Label();
-            this.txtnuevoStock = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnBuscaBodega = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -261,15 +261,66 @@
             this.panel1.Size = new System.Drawing.Size(519, 184);
             this.panel1.TabIndex = 22;
             // 
-            // panel2
+            // label11
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnAceptar);
-            this.panel2.Controls.Add(this.btnSalir);
-            this.panel2.Location = new System.Drawing.Point(537, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(107, 184);
-            this.panel2.TabIndex = 23;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(164, 103);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 13);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "+ Stock";
+            // 
+            // txtnuevoStock
+            // 
+            this.txtnuevoStock.Location = new System.Drawing.Point(214, 98);
+            this.txtnuevoStock.Name = "txtnuevoStock";
+            this.txtnuevoStock.Size = new System.Drawing.Size(42, 20);
+            this.txtnuevoStock.TabIndex = 43;
+            // 
+            // lblAccion
+            // 
+            this.lblAccion.AutoSize = true;
+            this.lblAccion.Location = new System.Drawing.Point(193, 15);
+            this.lblAccion.Name = "lblAccion";
+            this.lblAccion.Size = new System.Drawing.Size(35, 13);
+            this.lblAccion.TabIndex = 42;
+            this.lblAccion.Text = "label8";
+            // 
+            // txtCodProvProducto
+            // 
+            this.txtCodProvProducto.Location = new System.Drawing.Point(66, 69);
+            this.txtCodProvProducto.Name = "txtCodProvProducto";
+            this.txtCodProvProducto.Size = new System.Drawing.Size(36, 20);
+            this.txtCodProvProducto.TabIndex = 41;
+            // 
+            // txtcodBodProducto
+            // 
+            this.txtcodBodProducto.Location = new System.Drawing.Point(66, 41);
+            this.txtcodBodProducto.Name = "txtcodBodProducto";
+            this.txtcodBodProducto.Size = new System.Drawing.Size(36, 20);
+            this.txtcodBodProducto.TabIndex = 40;
+            // 
+            // btnBuscaProveedor
+            // 
+            this.btnBuscaProveedor.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnBuscaProveedor.Location = new System.Drawing.Point(214, 62);
+            this.btnBuscaProveedor.Name = "btnBuscaProveedor";
+            this.btnBuscaProveedor.Size = new System.Drawing.Size(33, 32);
+            this.btnBuscaProveedor.TabIndex = 39;
+            this.btnBuscaProveedor.Text = "...";
+            this.btnBuscaProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscaProveedor.Click += new System.EventHandler(this.btnBuscaProveedor_Click);
+            // 
+            // btnBuscaBodega
+            // 
+            this.btnBuscaBodega.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnBuscaBodega.Location = new System.Drawing.Point(214, 33);
+            this.btnBuscaBodega.Name = "btnBuscaBodega";
+            this.btnBuscaBodega.Size = new System.Drawing.Size(33, 30);
+            this.btnBuscaBodega.TabIndex = 38;
+            this.btnBuscaBodega.Text = "...";
+            this.btnBuscaBodega.UseVisualStyleBackColor = true;
+            this.btnBuscaBodega.Click += new System.EventHandler(this.btnBuscaBodega_Click);
             // 
             // label10
             // 
@@ -292,65 +343,15 @@
             this.cmbEstado.Size = new System.Drawing.Size(84, 21);
             this.cmbEstado.TabIndex = 34;
             // 
-            // btnBuscaProveedor
+            // panel2
             // 
-            this.btnBuscaProveedor.Location = new System.Drawing.Point(214, 69);
-            this.btnBuscaProveedor.Name = "btnBuscaProveedor";
-            this.btnBuscaProveedor.Size = new System.Drawing.Size(33, 23);
-            this.btnBuscaProveedor.TabIndex = 39;
-            this.btnBuscaProveedor.Text = "...";
-            this.btnBuscaProveedor.UseVisualStyleBackColor = true;
-            this.btnBuscaProveedor.Click += new System.EventHandler(this.btnBuscaProveedor_Click);
-            // 
-            // txtcodBodProducto
-            // 
-            this.txtcodBodProducto.Location = new System.Drawing.Point(66, 41);
-            this.txtcodBodProducto.Name = "txtcodBodProducto";
-            this.txtcodBodProducto.Size = new System.Drawing.Size(36, 20);
-            this.txtcodBodProducto.TabIndex = 40;
-            // 
-            // txtCodProvProducto
-            // 
-            this.txtCodProvProducto.Location = new System.Drawing.Point(66, 69);
-            this.txtCodProvProducto.Name = "txtCodProvProducto";
-            this.txtCodProvProducto.Size = new System.Drawing.Size(36, 20);
-            this.txtCodProvProducto.TabIndex = 41;
-            // 
-            // lblAccion
-            // 
-            this.lblAccion.AutoSize = true;
-            this.lblAccion.Location = new System.Drawing.Point(193, 15);
-            this.lblAccion.Name = "lblAccion";
-            this.lblAccion.Size = new System.Drawing.Size(35, 13);
-            this.lblAccion.TabIndex = 42;
-            this.lblAccion.Text = "label8";
-            // 
-            // txtnuevoStock
-            // 
-            this.txtnuevoStock.Location = new System.Drawing.Point(214, 98);
-            this.txtnuevoStock.Name = "txtnuevoStock";
-            this.txtnuevoStock.Size = new System.Drawing.Size(42, 20);
-            this.txtnuevoStock.TabIndex = 43;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(164, 103);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 13);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "+ Stock";
-            // 
-            // btnBuscaBodega
-            // 
-            this.btnBuscaBodega.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
-            this.btnBuscaBodega.Location = new System.Drawing.Point(214, 39);
-            this.btnBuscaBodega.Name = "btnBuscaBodega";
-            this.btnBuscaBodega.Size = new System.Drawing.Size(33, 25);
-            this.btnBuscaBodega.TabIndex = 38;
-            this.btnBuscaBodega.Text = "...";
-            this.btnBuscaBodega.UseVisualStyleBackColor = true;
-            this.btnBuscaBodega.Click += new System.EventHandler(this.btnBuscaBodega_Click);
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnAceptar);
+            this.panel2.Controls.Add(this.btnSalir);
+            this.panel2.Location = new System.Drawing.Point(537, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(107, 184);
+            this.panel2.TabIndex = 23;
             // 
             // Registro_productos
             // 

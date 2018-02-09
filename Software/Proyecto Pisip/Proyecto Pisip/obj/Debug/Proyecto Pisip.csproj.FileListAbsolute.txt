@@ -76,3 +76,6 @@ C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingen
 C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\Proyecto\PISIP\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.ConsultaEmpleado.resources
 C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\Proyecto\PISIP\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Clases.Consulta_Bodega.resources
 C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\Proyecto\PISIP\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.ConsultaProveedor.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\Proyecto\PISIP\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Consulta_Cliente.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\Proyecto\PISIP\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Consulta_Factura.resources
+C:\Users\rtorres\Documents\documento personales\Universidad Israel\Septimo\Ingenieria de software II\Proyecto\PISIP\Software\Proyecto Pisip\Proyecto Pisip\obj\Debug\Proyecto_Pisip.Consulta_Producto.resources
