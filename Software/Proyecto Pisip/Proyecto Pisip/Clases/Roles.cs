@@ -9,5 +9,6 @@ namespace Proyecto_Pisip.Clases
 {
     public class Roles
     {
+        
     }
 }

@@ -77,12 +77,32 @@
     <Compile Include="Actualizar Usuario.Designer.cs">
       <DependentUpon>Actualizar Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Bodega.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Consulta Bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta Bodega.Designer.cs">
+      <DependentUpon>Consulta Bodega.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\Roles.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="ConsultaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEmpleado.Designer.cs">
+      <DependentUpon>ConsultaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaProveedor.Designer.cs">
+      <DependentUpon>ConsultaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +168,15 @@
     <EmbeddedResource Include="Actualizar Usuario.resx">
       <DependentUpon>Actualizar Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta Bodega.resx">
+      <DependentUpon>Consulta Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaEmpleado.resx">
+      <DependentUpon>ConsultaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaProveedor.resx">
+      <DependentUpon>ConsultaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Registro clientes.resx">
       <DependentUpon>Registro clientes.cs</DependentUpon>
@@ -193,6 +223,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconos\busqueda.png" />
+    <Content Include="iconos\busqueda1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

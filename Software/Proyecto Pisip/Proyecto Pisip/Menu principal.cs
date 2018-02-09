@@ -50,5 +50,11 @@ namespace Proyecto_Pisip
             Actualizar_Usuario act_usuario = new Actualizar_Usuario();
             act_usuario.Show();
         }
+
+        private void ingresoMantenimientoToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Actualizar_productos act_producto = new Actualizar_productos();
+            act_producto.Show();
+        }
     }
 }
