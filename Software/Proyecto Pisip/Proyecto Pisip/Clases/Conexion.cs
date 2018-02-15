@@ -18,9 +18,15 @@ namespace Proyecto_Pisip.Clases
         {
             try
             {
-                conexion.Open();
+                if (Convert.ToBoolean(conexion.State) == false)
+                {
+                    conexion.Open();
+                    
+                }
                 return true;
-            }catch(MySqlException ex)
+
+            }
+            catch(MySqlException ex)
             {
                 return false;
                 throw ex;

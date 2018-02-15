@@ -59,6 +59,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmbCobraIva = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -242,6 +244,8 @@
             this.panel1.Controls.Add(this.txtcodBodProducto);
             this.panel1.Controls.Add(this.btnBuscaProveedor);
             this.panel1.Controls.Add(this.btnBuscaBodega);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.cmbCobraIva);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.cmbEstado);
             this.panel1.Controls.Add(this.label9);
@@ -325,7 +329,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(278, 136);
+            this.label10.Location = new System.Drawing.Point(278, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 33;
@@ -338,7 +342,7 @@
             this.cmbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbEstado.Location = new System.Drawing.Point(374, 133);
+            this.cmbEstado.Location = new System.Drawing.Point(374, 155);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(84, 21);
             this.cmbEstado.TabIndex = 34;
@@ -352,6 +356,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(107, 184);
             this.panel2.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(278, 130);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Cobrar Iva";
+            // 
+            // cmbCobraIva
+            // 
+            this.cmbCobraIva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCobraIva.FormattingEnabled = true;
+            this.cmbCobraIva.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.cmbCobraIva.Location = new System.Drawing.Point(374, 128);
+            this.cmbCobraIva.Name = "cmbCobraIva";
+            this.cmbCobraIva.Size = new System.Drawing.Size(54, 21);
+            this.cmbCobraIva.TabIndex = 34;
             // 
             // Registro_productos
             // 
@@ -411,5 +436,7 @@
         public System.Windows.Forms.TextBox txtCodProducto;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtnuevoStock;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmbCobraIva;
     }
 }

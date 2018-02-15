@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Proyecto_Pisip.Clases
 {
@@ -21,12 +22,13 @@ namespace Proyecto_Pisip.Clases
         public double Precio_Compra_Producto { get; set; }
         public double Precio_Venta_Producto { get; set; }
         public DateTime Fecha_Caduca_Producto { get; set; }
+        public int Iva_Producto { get; set; }
         public int Estado_Producto { get; set; }
 
         public Producto()
         {
         }
-        public Producto(int pCodProducto, int pCodBodProducto,string pSucursalBodProducto, int pCod_ProvProducto, string pNomProvProducto, string pNombreProducto, int pStockProducto, int pStockMinProducto, double pPrecioCompraProducto, double pPrecioVentaProducto, DateTime pFechaCaducaProducto, int pEstadoProducto)
+        public Producto(int pCodProducto, int pCodBodProducto,string pSucursalBodProducto, int pCod_ProvProducto, string pNomProvProducto, string pNombreProducto, int pStockProducto, int pStockMinProducto, double pPrecioCompraProducto, double pPrecioVentaProducto, DateTime pFechaCaducaProducto, int pIvaProducto ,int pEstadoProducto)
         {
             this.Cod_Producto = pCodProducto;
             this.Cod_Bod_Producto = pCodBodProducto;
@@ -39,6 +41,7 @@ namespace Proyecto_Pisip.Clases
             this.Precio_Compra_Producto = pPrecioCompraProducto;
             this.Precio_Venta_Producto = pPrecioVentaProducto;
             this.Fecha_Caduca_Producto = pFechaCaducaProducto;
+            this.Iva_Producto = pIvaProducto;
             this.Estado_Producto = pEstadoProducto;
         }
         public static int AgregarProducto(MySqlConnection conexion, Producto pProducto)
@@ -58,6 +61,7 @@ namespace Proyecto_Pisip.Clases
             comando.Parameters.AddWithValue("@precioCompraProducto", pProducto.Precio_Compra_Producto);
             comando.Parameters.AddWithValue("@precioVentaProducto", pProducto.Precio_Venta_Producto);
             comando.Parameters.AddWithValue("@fechaCaducaProducto", pProducto.Fecha_Caduca_Producto);
+            comando.Parameters.AddWithValue("@ivaProducto", pProducto.Iva_Producto);
             comando.Parameters.AddWithValue("@estadoProducto", pProducto.Estado_Producto);
             retorno = comando.ExecuteNonQuery();
             return retorno;
@@ -80,6 +84,7 @@ namespace Proyecto_Pisip.Clases
             comando.Parameters.AddWithValue("@precioCompraProducto", pProducto.Precio_Compra_Producto);
             comando.Parameters.AddWithValue("@precioVentaProducto", pProducto.Precio_Venta_Producto);
             comando.Parameters.AddWithValue("@fechaCaducaProducto", pProducto.Fecha_Caduca_Producto);
+            comando.Parameters.AddWithValue("@ivaProducto", pProducto.Iva_Producto);
             comando.Parameters.AddWithValue("@estadoProducto", pProducto.Estado_Producto);
             retorno = comando.ExecuteNonQuery();
             return retorno;
@@ -88,7 +93,7 @@ namespace Proyecto_Pisip.Clases
         public static IList<Producto> Busca_Producto(MySqlConnection conexion, string B_NombreProducto)
         {
             List<Producto> listaProduc = new List<Producto>();
-            MySqlCommand consulta = new MySqlCommand("select CODIGO_PRODUCTO,pr.CODIGO_BODEGA, b.SUCURSAL, pr.CODIGO_PROVEEDOR, p.NOMBRE_PROVEEDOR, NOMBRE_PRODUCTO,STOCK,STOCK_MINIMO, PRECIO_COMPRA, PRECIO_VENTA, FECHA_CADUCA, ESTADO_PRODUCTO from producto pr, Bodega b, proveedores p where pr.CODIGO_BODEGA = b.CODIGO_BODEGA and pr.CODIGO_PROVEEDOR = p.CODIGO_PROVEEDOR AND NOMBRE_PRODUCTO LIKE ('%" + B_NombreProducto + "%') ", conexion);
+            MySqlCommand consulta = new MySqlCommand("select CODIGO_PRODUCTO,pr.CODIGO_BODEGA, b.SUCURSAL, pr.CODIGO_PROVEEDOR, p.NOMBRE_PROVEEDOR, NOMBRE_PRODUCTO,STOCK,STOCK_MINIMO, PRECIO_COMPRA, PRECIO_VENTA, FECHA_CADUCA,IVA_PRODUCTO, ESTADO_PRODUCTO from producto pr, Bodega b, proveedores p where pr.CODIGO_BODEGA = b.CODIGO_BODEGA and pr.CODIGO_PROVEEDOR = p.CODIGO_PROVEEDOR AND NOMBRE_PRODUCTO LIKE ('%" + B_NombreProducto + "%') ", conexion);
             MySqlDataReader ejecuta = consulta.ExecuteReader();
             while (ejecuta.Read())
             {
@@ -104,7 +109,8 @@ namespace Proyecto_Pisip.Clases
                 Bproducto.Precio_Compra_Producto = ejecuta.GetDouble(8);
                 Bproducto.Precio_Venta_Producto = ejecuta.GetDouble(9);
                 Bproducto.Fecha_Caduca_Producto = ejecuta.GetDateTime(10);
-                Bproducto.Estado_Producto = ejecuta.GetInt16(11);
+                Bproducto.Iva_Producto = ejecuta.GetInt16(11);
+                Bproducto.Estado_Producto = ejecuta.GetInt16(12);
 
                 listaProduc.Add(Bproducto);
             }
@@ -134,7 +140,8 @@ namespace Proyecto_Pisip.Clases
                 pProducto.Precio_Compra_Producto = ejecuta.GetDouble(8);
                 pProducto.Precio_Venta_Producto = ejecuta.GetDouble(9);
                 pProducto.Fecha_Caduca_Producto = ejecuta.GetDateTime(10);
-                pProducto.Estado_Producto = ejecuta.GetInt16(11);
+                pProducto.Iva_Producto = ejecuta.GetInt16(11);
+                pProducto.Estado_Producto = ejecuta.GetInt16(12);
 
             }
             return pProducto;
@@ -151,5 +158,37 @@ namespace Proyecto_Pisip.Clases
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
+        public static int ModificarStockProducto(MySqlConnection conexion, int pCodProducto,int pValorExistencia)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandText = "PA_Actualizar_Stock_Producto";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = conexion;
+
+            comando.Parameters.AddWithValue("@codProducto", pCodProducto);
+            comando.Parameters.AddWithValue("@ValorExistencia", pValorExistencia);
+            
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+        public static int llenaProducto(MySqlConnection conexion, DataGridView dgv, int pCodFactura)
+        {
+            DataTable dt;
+            //MySqlCommand comando = new MySqlCommand();
+            //comando.CommandText = "select SECUENCIAL,DESCRIPCION,CANTIDADXPRODUCTO,VALOR_UNITARIO,VALOR_TOTAL, 0 as Iva,CODIGO_FACTURA from detalle_factura where CODIGO_FACTURA="+ pCodFactura + "  ";
+            //comando.CommandType = CommandType.StoredProcedure;
+            //comando.Connection = conexion;
+
+            //comando.Parameters.AddWithValue("@codProducto", pCodFactura);
+
+            MySqlDataAdapter ejecuta = new MySqlDataAdapter("select SECUENCIAL,DESCRIPCION,CANTIDADXPRODUCTO,VALOR_UNITARIO,VALOR_TOTAL, 0 as Iva,CODIGO_FACTURA from detalle_factura where CODIGO_FACTURA=" + pCodFactura + "  ",conexion);
+            dt = new DataTable();
+            ejecuta.Fill(dt);
+            dgv.DataSource = dt;
+            return 1;
+        }
+
     }
 }

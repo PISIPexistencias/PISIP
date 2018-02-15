@@ -89,7 +89,15 @@ namespace Proyecto_Pisip
                         txtStockMinProducto.Text = Convert.ToString(ProductoSeleccionado.Stock_Min_Producto);
                         txtPrecioCompraProducto.Text = Convert.ToString(ProductoSeleccionado.Precio_Compra_Producto);
                         txtPrecioVentaProducto.Text = Convert.ToString(ProductoSeleccionado.Precio_Venta_Producto);
-
+                        // si cobra IVa=0 No cobra iva=1
+                        if (ProductoSeleccionado.Iva_Producto==0)
+                        {
+                            cmbCobraIva.Text = "SI";
+                        }
+                        else
+                        {
+                            cmbCobraIva.Text = "NO";
+                        }
                         if (ProductoSeleccionado.Estado_Producto == 0)
                         {
                             cmbEstado.Text = "Activo";
@@ -138,6 +146,15 @@ namespace Proyecto_Pisip
                     pProducto.Precio_Compra_Producto = Convert.ToDouble(txtPrecioCompraProducto.Text);
                     pProducto.Precio_Venta_Producto = Convert.ToDouble(txtPrecioVentaProducto.Text);
                     pProducto.Fecha_Caduca_Producto = Convert.ToDateTime(dtpFechaCaducaProducto.Text);
+                    // si cobra IVa=0 No cobra iva=1
+                    if (cmbCobraIva.Text == "SI")
+                    {
+                        pProducto.Iva_Producto = 0;
+                    }
+                    else
+                    {
+                        pProducto.Iva_Producto = 1;
+                    }
 
                     if (cmbEstado.Text == "Activo")
                     {

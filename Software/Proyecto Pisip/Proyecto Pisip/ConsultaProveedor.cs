@@ -33,7 +33,7 @@ namespace Proyecto_Pisip
 
 
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }

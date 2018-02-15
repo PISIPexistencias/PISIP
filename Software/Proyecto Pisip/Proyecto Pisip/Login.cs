@@ -25,33 +25,41 @@ namespace Proyecto_Pisip
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            Clases.Conexion conecta = new Clases.Conexion();
-
-            if ((conecta.AbrirConexion()) == true)
+            try
             {
-                MySqlCommand comando = new MySqlCommand("select CODIGO_USUARIO,CLAVE_USUARIO,APELLIDOS_EMPLEADO,NOMBRES_EMPLEADO FROM usuario u, empleados e where u.codigo_usuario= '" + txtuser.Text + "' and u.clave_usuario='" + txtpass.Text + "' and u.codigo_empleado = e.codigo_empleado ", conecta.conexion);
-                MySqlDataReader ejecuta = comando.ExecuteReader();
-                if (ejecuta.Read() == true)
+                Clases.Conexion conecta = new Clases.Conexion();
+
+                if ((conecta.AbrirConexion()) == true)
                 {
-                    MessageBox.Show("Bienvenido " + ejecuta["APELLIDOS_EMPLEADO"] + " " + ejecuta["NOMBRES_EMPLEADO"]);
-                   
-                    Menu_principal menu = new Menu_principal();
-                    this.Hide();
-                    menu.Show();
+                    MySqlCommand comando = new MySqlCommand("select CODIGO_USUARIO,CLAVE_USUARIO,APELLIDOS_EMPLEADO,NOMBRES_EMPLEADO FROM usuario u, empleados e where u.codigo_usuario= '" + txtuser.Text + "' and u.clave_usuario='" + txtpass.Text + "' and u.codigo_empleado = e.codigo_empleado ", conecta.conexion);
+                    MySqlDataReader ejecuta = comando.ExecuteReader();
+                    if (ejecuta.Read() == true)
+                    {
+                        MessageBox.Show("Bienvenido " + ejecuta["APELLIDOS_EMPLEADO"] + " " + ejecuta["NOMBRES_EMPLEADO"]);
+
+                        Menu_principal menu = new Menu_principal();
+                        this.Hide();
+                        menu.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario Incorrecto", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        txtuser.Clear();
+                        txtpass.Clear();
+                    }
+                    conecta.CerrarConexion();
+                    conecta.conexion.Dispose();
+
                 }
                 else
                 {
-                    MessageBox.Show("Usuario Incorrecto");
-                    txtuser.Clear();
-                    txtpass.Clear();
+                    MessageBox.Show("no conectado");
                 }
-                conecta.CerrarConexion();
-                conecta.conexion.Dispose();
 
             }
-            else
+            catch (MySqlException ex)
             {
-                MessageBox.Show("no conectado");
+                MessageBox.Show(ex.Message);
             }
             
         }
