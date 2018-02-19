@@ -19,10 +19,11 @@ namespace Proyecto_Pisip.Clases
         public double Iva_Factura { get; set; }
         public double Sub_Total_Factura { get; set; }
         public double Total_Factura { get; set; }
+        public int Estado_Factura { get; set; }
         public Factura()
         {
         }
-        public Factura(int pCodFactura, int pCodCliFactura, string pCedulaCliFactura, string pApellidoCliFactura, string pNombreCliFactura, DateTime pFechaFactura, double pIvaFactura, double pSubTotalFactura, double pTotalFactura)
+        public Factura(int pCodFactura, int pCodCliFactura, string pCedulaCliFactura, string pApellidoCliFactura, string pNombreCliFactura, DateTime pFechaFactura, double pIvaFactura, double pSubTotalFactura, double pTotalFactura, int pEstadoFactura)
         {
             this.Codigo_Factura = pCodFactura;
             this.Cod_Cliente_Factura = pCodCliFactura;
@@ -33,6 +34,7 @@ namespace Proyecto_Pisip.Clases
             this.Iva_Factura = pIvaFactura;
             this.Sub_Total_Factura = pSubTotalFactura;
             this.Total_Factura = pTotalFactura;
+            this.Estado_Factura = pEstadoFactura;
         }
         public static int AgregarFactura(MySqlConnection conexion, Factura pFactura)
         {
@@ -74,7 +76,7 @@ namespace Proyecto_Pisip.Clases
         public static IList<Factura> Busca_Factura(MySqlConnection conexion, string B_ApellidoCli, string b_NombreCli)
         {
             List<Factura> lista = new List<Factura>();
-            MySqlCommand consulta = new MySqlCommand("select  CODIGO_FACTURA,f.ID_CLIENTE,c.CEDULA, c.APELLIDOS, c.NOMBRES , FECHA_FACTURA, IVA_VALOR, SUB_TOTAL, VALOR_TOTAL from factura f, cliente c where f.id_cliente = c.id_cliente and c.APELLIDOS LIKE ('%" + B_ApellidoCli + "%') and c.NOMBRES LIKE ('%" + B_ApellidoCli + "%') ", conexion);
+            MySqlCommand consulta = new MySqlCommand("select  CODIGO_FACTURA,f.ID_CLIENTE,c.CEDULA, c.APELLIDOS, c.NOMBRES , FECHA_FACTURA, IVA_VALOR, SUB_TOTAL, VALOR_TOTAL , ESTADO_FACTURA from factura f, cliente c where f.id_cliente = c.id_cliente and c.APELLIDOS LIKE ('%" + B_ApellidoCli + "%') and c.NOMBRES LIKE ('%" + B_ApellidoCli + "%') ", conexion);
             MySqlDataReader ejecuta = consulta.ExecuteReader();
             while (ejecuta.Read())
             {
@@ -88,6 +90,7 @@ namespace Proyecto_Pisip.Clases
                 Bfactura.Iva_Factura = ejecuta.GetDouble(6);
                 Bfactura.Sub_Total_Factura = ejecuta.GetDouble(7);
                 Bfactura.Total_Factura = ejecuta.GetDouble(8);
+                Bfactura.Estado_Factura = ejecuta.GetInt32(9);
 
 
                 lista.Add(Bfactura);
@@ -137,18 +140,18 @@ namespace Proyecto_Pisip.Clases
         //    }
         //    return pCliente;
         //}
-        ////public static int EliminarCliente(MySqlConnection conexion, int pcodCliente)
-        ////{
-        ////    int retorno = 0;
-        ////    MySqlCommand comando = new MySqlCommand();
-        ////    comando.CommandText = "PA_EliminarCliente";
-        ////    comando.CommandType = CommandType.StoredProcedure;
-        ////    comando.Connection = conexion;
+        public static int AnularFactura(MySqlConnection conexion, int pcodFactura)
+        {
+            int retorno = 0;
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandText = "PA_AnularFactura";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = conexion;
 
-        ////    comando.Parameters.AddWithValue("@cod_cliente", pcodCliente);
-        ////    retorno = comando.ExecuteNonQuery();
-        ////    return retorno;
-        ////}
+            comando.Parameters.AddWithValue("@codFactura", pcodFactura);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
 
     }
 }

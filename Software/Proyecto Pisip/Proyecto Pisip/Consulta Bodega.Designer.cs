@@ -117,7 +117,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Consulta_Bodega";
-            this.Text = "Consulta_Bodega";
+            this.Text = "Consultar Bodega";
             this.Load += new System.EventHandler(this.Consulta_Bodega_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).EndInit();

@@ -137,7 +137,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Consulta_Factura";
-            this.Text = "Consulta_Factura";
+            this.Text = "Consultar Factura";
             this.Load += new System.EventHandler(this.Consulta_Factura_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();

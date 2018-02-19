@@ -158,7 +158,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultaEmpleado";
-            this.Text = "ConsultaEmpleado";
+            this.Text = "Consultar Empleado";
             this.Load += new System.EventHandler(this.ConsultaEmpleado_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();

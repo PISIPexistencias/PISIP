@@ -204,7 +204,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Actualizar_empleado";
-            this.Text = "Actualizar_empleado";
+            this.Text = "Mantenimiento Empleado";
             this.Load += new System.EventHandler(this.Actualizar_empleado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

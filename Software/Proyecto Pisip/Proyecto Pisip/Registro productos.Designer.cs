@@ -56,11 +56,11 @@
             this.txtcodBodProducto = new System.Windows.Forms.TextBox();
             this.btnBuscaProveedor = new System.Windows.Forms.Button();
             this.btnBuscaBodega = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmbCobraIva = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cmbCobraIva = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -289,6 +289,7 @@
             this.lblAccion.Size = new System.Drawing.Size(35, 13);
             this.lblAccion.TabIndex = 42;
             this.lblAccion.Text = "label8";
+            this.lblAccion.Visible = false;
             // 
             // txtCodProvProducto
             // 
@@ -326,6 +327,27 @@
             this.btnBuscaBodega.UseVisualStyleBackColor = true;
             this.btnBuscaBodega.Click += new System.EventHandler(this.btnBuscaBodega_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(278, 130);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Cobrar Iva";
+            // 
+            // cmbCobraIva
+            // 
+            this.cmbCobraIva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCobraIva.FormattingEnabled = true;
+            this.cmbCobraIva.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.cmbCobraIva.Location = new System.Drawing.Point(374, 128);
+            this.cmbCobraIva.Name = "cmbCobraIva";
+            this.cmbCobraIva.Size = new System.Drawing.Size(54, 21);
+            this.cmbCobraIva.TabIndex = 34;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -357,27 +379,6 @@
             this.panel2.Size = new System.Drawing.Size(107, 184);
             this.panel2.TabIndex = 23;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(278, 130);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 13);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Cobrar Iva";
-            // 
-            // cmbCobraIva
-            // 
-            this.cmbCobraIva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCobraIva.FormattingEnabled = true;
-            this.cmbCobraIva.Items.AddRange(new object[] {
-            "SI",
-            "NO"});
-            this.cmbCobraIva.Location = new System.Drawing.Point(374, 128);
-            this.cmbCobraIva.Name = "cmbCobraIva";
-            this.cmbCobraIva.Size = new System.Drawing.Size(54, 21);
-            this.cmbCobraIva.TabIndex = 34;
-            // 
             // Registro_productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,7 +394,7 @@
             this.Controls.Add(this.panel2);
             this.MaximizeBox = false;
             this.Name = "Registro_productos";
-            this.Text = "Registro_productos";
+            this.Text = "Registrar Producto";
             this.Load += new System.EventHandler(this.Registro_productos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

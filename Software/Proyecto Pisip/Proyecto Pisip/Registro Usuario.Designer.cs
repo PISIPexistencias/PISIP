@@ -162,6 +162,7 @@
             this.lblAccion.Size = new System.Drawing.Size(35, 13);
             this.lblAccion.TabIndex = 0;
             this.lblAccion.Text = "label8";
+            this.lblAccion.Visible = false;
             // 
             // label5
             // 
@@ -272,7 +273,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Registro_Usuario";
-            this.Text = "Registro_Usuario";
+            this.Text = "Registrar Usuario";
             this.Load += new System.EventHandler(this.Registro_Usuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -163,7 +163,7 @@
             this.Controls.Add(this.panel3);
             this.MaximizeBox = false;
             this.Name = "Actualizar_productos";
-            this.Text = "Actualizar_productos";
+            this.Text = "Mantenimiento Productos";
             this.Load += new System.EventHandler(this.Actualizar_productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).EndInit();
             this.panel2.ResumeLayout(false);

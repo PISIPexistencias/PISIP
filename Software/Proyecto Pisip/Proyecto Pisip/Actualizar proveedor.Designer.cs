@@ -183,7 +183,7 @@
             this.Controls.Add(this.panel3);
             this.MaximizeBox = false;
             this.Name = "Actualizar_proveedor";
-            this.Text = "Buscar Proeedor";
+            this.Text = "Matenimiento Proveedor";
             this.Load += new System.EventHandler(this.Actualizar_proveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();
             this.panel1.ResumeLayout(false);

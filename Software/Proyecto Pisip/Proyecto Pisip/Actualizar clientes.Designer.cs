@@ -347,7 +347,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Actualizar_clientes";
-            this.Text = "Actualizar_clientes";
+            this.Text = "Mantenimiento Cliente";
             this.Activated += new System.EventHandler(this.Actualizar_clientes_Activated);
             this.Load += new System.EventHandler(this.Actualizar_clientes_Load);
             this.panel1.ResumeLayout(false);

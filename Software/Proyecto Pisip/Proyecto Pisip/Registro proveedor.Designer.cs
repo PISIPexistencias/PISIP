@@ -43,10 +43,10 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtFono = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblAccion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -180,6 +180,18 @@
             this.panel1.Size = new System.Drawing.Size(270, 222);
             this.panel1.TabIndex = 14;
             // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstado.Location = new System.Drawing.Point(95, 186);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(84, 21);
+            this.cmbEstado.TabIndex = 33;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -197,6 +209,7 @@
             this.lblAccion.Size = new System.Drawing.Size(35, 13);
             this.lblAccion.TabIndex = 1;
             this.lblAccion.Text = "label8";
+            this.lblAccion.Visible = false;
             // 
             // panel2
             // 
@@ -206,18 +219,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(122, 222);
             this.panel2.TabIndex = 15;
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbEstado.Location = new System.Drawing.Point(95, 186);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(84, 21);
-            this.cmbEstado.TabIndex = 33;
             // 
             // Registro_proveedor
             // 

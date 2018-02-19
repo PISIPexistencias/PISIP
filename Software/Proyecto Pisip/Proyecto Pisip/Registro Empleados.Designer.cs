@@ -44,11 +44,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscaEmpl = new System.Windows.Forms.Button();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.txtcodBodega = new System.Windows.Forms.TextBox();
             this.lblAccion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnBuscaEmpl = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -204,6 +204,17 @@
             this.panel1.Size = new System.Drawing.Size(323, 234);
             this.panel1.TabIndex = 32;
             // 
+            // btnBuscaEmpl
+            // 
+            this.btnBuscaEmpl.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnBuscaEmpl.Location = new System.Drawing.Point(245, 32);
+            this.btnBuscaEmpl.Name = "btnBuscaEmpl";
+            this.btnBuscaEmpl.Size = new System.Drawing.Size(33, 33);
+            this.btnBuscaEmpl.TabIndex = 38;
+            this.btnBuscaEmpl.Text = "...";
+            this.btnBuscaEmpl.UseVisualStyleBackColor = true;
+            this.btnBuscaEmpl.Click += new System.EventHandler(this.btnBuscaEmpl_Click);
+            // 
             // cmbEstado
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -234,6 +245,7 @@
             this.lblAccion.Size = new System.Drawing.Size(35, 13);
             this.lblAccion.TabIndex = 0;
             this.lblAccion.Text = "label8";
+            this.lblAccion.Visible = false;
             // 
             // panel2
             // 
@@ -244,17 +256,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(114, 234);
             this.panel2.TabIndex = 33;
-            // 
-            // btnBuscaEmpl
-            // 
-            this.btnBuscaEmpl.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
-            this.btnBuscaEmpl.Location = new System.Drawing.Point(245, 32);
-            this.btnBuscaEmpl.Name = "btnBuscaEmpl";
-            this.btnBuscaEmpl.Size = new System.Drawing.Size(33, 33);
-            this.btnBuscaEmpl.TabIndex = 38;
-            this.btnBuscaEmpl.Text = "...";
-            this.btnBuscaEmpl.UseVisualStyleBackColor = true;
-            this.btnBuscaEmpl.Click += new System.EventHandler(this.btnBuscaEmpl_Click);
             // 
             // Registro_Empleados
             // 
@@ -267,7 +268,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Registro_Empleados";
-            this.Text = "Registro_Empleados";
+            this.Text = "Registrar Empleado";
             this.Load += new System.EventHandler(this.Registro_Empleados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -33,10 +33,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCodProveedor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNomProveedor = new System.Windows.Forms.TextBox();
-            this.txtCodProveedor = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
             this.panel1.SuspendLayout();
@@ -96,6 +96,22 @@
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Codigo";
+            // 
+            // txtCodProveedor
+            // 
+            this.txtCodProveedor.Location = new System.Drawing.Point(49, 11);
+            this.txtCodProveedor.Name = "txtCodProveedor";
+            this.txtCodProveedor.Size = new System.Drawing.Size(67, 20);
+            this.txtCodProveedor.TabIndex = 22;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -112,22 +128,6 @@
             this.txtNomProveedor.Size = new System.Drawing.Size(75, 20);
             this.txtNomProveedor.TabIndex = 24;
             // 
-            // txtCodProveedor
-            // 
-            this.txtCodProveedor.Location = new System.Drawing.Point(49, 11);
-            this.txtCodProveedor.Name = "txtCodProveedor";
-            this.txtCodProveedor.Size = new System.Drawing.Size(67, 20);
-            this.txtCodProveedor.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Codigo";
-            // 
             // ConsultaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,7 +137,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "ConsultaProveedor";
-            this.Text = "ConsultaProveedor";
+            this.Text = "Consultar Proveedor";
             this.Load += new System.EventHandler(this.ConsultaProveedor_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).EndInit();

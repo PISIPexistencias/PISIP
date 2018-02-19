@@ -83,6 +83,18 @@ namespace Proyecto_Pisip
                         lblIva.Text = Convert.ToString(consultaFactura.dgvFactura.CurrentRow.Cells[6].Value);
                         lblSubTotal.Text = Convert.ToString(consultaFactura.dgvFactura.CurrentRow.Cells[7].Value);
                         lblTotal.Text = Convert.ToString(consultaFactura.dgvFactura.CurrentRow.Cells[8].Value);
+                        lblEstado.Visible = true;
+                        if (Convert.ToInt32(consultaFactura.dgvFactura.CurrentRow.Cells[9].Value)==0)
+                        {
+                            lblEstado.Text = "Activa";
+                            btnModificar.Enabled = true;
+                        }
+                        else
+                        {
+                            lblEstado.Text = "Anulada";
+                            btnModificar.Enabled = false;
+                        }
+                        
                         dgvDetalleFactura.Visible = false;
                         dgvDetallefatMostrar.Visible = true;
                         if (conectaPro.AbrirConexion() == true)
@@ -92,7 +104,7 @@ namespace Proyecto_Pisip
                         }
                         conecta.CerrarConexion();
                         lblAccion.Text = "M";
-                        btnModificar.Enabled = true;
+                        //btnModificar.Enabled = true;
                         btnImprimir.Enabled = true;
                         btnAgregarDetalle.Enabled = false;
                         btnIngresar.Enabled = false;
@@ -186,6 +198,7 @@ namespace Proyecto_Pisip
 
                         dgvDetalleFactura.Rows.RemoveAt(filaSeleccionada);
                         RindexSecuencia();
+                        VaciarProducto();
                     }
                     
                 }
@@ -208,11 +221,11 @@ namespace Proyecto_Pisip
 
         private void dgvDetalleFactura_Click(object sender, EventArgs e)
         {
-            txtNombreProducto.Text = Convert.ToString( dgvDetalleFactura.CurrentRow.Cells[1].Value);
-            txtPrecioVenta.Text= Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[3].Value);
-            txtCantidad.Text= Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[2].Value);
-            lblCobraIva.Text= Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[5].Value);
-            txtCodProducto.Text= Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[6].Value);
+            txtNombreProducto.Text = Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[1].Value);
+            txtPrecioVenta.Text = Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[3].Value);
+            txtCantidad.Text = Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[2].Value);
+            lblCobraIva.Text = Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[5].Value);
+            txtCodProducto.Text = Convert.ToString(dgvDetalleFactura.CurrentRow.Cells[6].Value);
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -325,11 +338,32 @@ namespace Proyecto_Pisip
             txtCantidad.Clear();
             txtStock.Clear();
             lblCobraIva.Text = ".";
+            lblEstado.Visible = false;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                if (conecta.AbrirConexion() == true)
+                {
+                    int resultado = 0;
+                    resultado = Clases.Factura.AnularFactura(conecta.conexion, Convert.ToInt32(txtCodFactura.Text));
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("El Registro ha sido Anulado Exitosamente");
+                        btnModificar.Enabled = false;
+                    }
+                    conecta.CerrarConexion();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                conecta.CerrarConexion();
+
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -345,6 +379,15 @@ namespace Proyecto_Pisip
             lblAccion.Text = "I";
             btnAgregarDetalle.Enabled = true;
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            int numeroFatura;
+            numeroFatura = Convert.ToInt32(txtCodFactura.Text);
+            imprimirDetalleFactura detalleFactura = new imprimirDetalleFactura();
+            detalleFactura.numeroFactura = numeroFatura;
+            detalleFactura.ShowDialog();
         }
 
         void VaciarEncabezado()

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvProducto = new System.Windows.Forms.DataGridView();
-            this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
+            this.txtNombreProducto = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvProducto = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
@@ -51,42 +51,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(296, 82);
             this.panel1.TabIndex = 38;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.dgvProducto);
-            this.panel3.Location = new System.Drawing.Point(12, 100);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 157);
-            this.panel3.TabIndex = 39;
-            // 
-            // dgvProducto
-            // 
-            this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducto.Location = new System.Drawing.Point(16, 16);
-            this.dgvProducto.MultiSelect = false;
-            this.dgvProducto.Name = "dgvProducto";
-            this.dgvProducto.ReadOnly = true;
-            this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducto.Size = new System.Drawing.Size(258, 126);
-            this.dgvProducto.TabIndex = 3;
-            // 
-            // txtNombreProducto
-            // 
-            this.txtNombreProducto.Location = new System.Drawing.Point(73, 12);
-            this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(139, 20);
-            this.txtNombreProducto.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Producto";
             // 
             // btnSalir
             // 
@@ -108,6 +72,42 @@
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.Location = new System.Drawing.Point(73, 12);
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Size = new System.Drawing.Size(139, 20);
+            this.txtNombreProducto.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Producto";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.dgvProducto);
+            this.panel3.Location = new System.Drawing.Point(12, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(296, 157);
+            this.panel3.TabIndex = 39;
+            // 
+            // dgvProducto
+            // 
+            this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducto.Location = new System.Drawing.Point(16, 16);
+            this.dgvProducto.MultiSelect = false;
+            this.dgvProducto.Name = "dgvProducto";
+            this.dgvProducto.ReadOnly = true;
+            this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProducto.Size = new System.Drawing.Size(258, 126);
+            this.dgvProducto.TabIndex = 3;
+            // 
             // Consulta_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,7 +117,7 @@
             this.Controls.Add(this.panel3);
             this.MaximizeBox = false;
             this.Name = "Consulta_Producto";
-            this.Text = "Consulta_Producto";
+            this.Text = "Consultar Producto";
             this.Load += new System.EventHandler(this.Consulta_Producto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -204,7 +204,7 @@
             this.Controls.Add(this.panel1);
             this.MinimizeBox = false;
             this.Name = "Actualizar_Usuario";
-            this.Text = "Actualizar_Usuario";
+            this.Text = "Mantenimiento Usuario";
             this.Load += new System.EventHandler(this.Actualizar_Usuario_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
