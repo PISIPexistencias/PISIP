@@ -100,6 +100,8 @@ namespace Proyecto_Pisip
                         if (conectaPro.AbrirConexion() == true)
                         {
                             Clases.Producto.llenaProducto(conectaPro.conexion, dgvDetallefatMostrar, Convert.ToInt32(txtCodFactura.Text));
+                            dgvDetallefatMostrar.Columns[5].Visible = false;
+                            dgvDetallefatMostrar.Columns[6].Visible = false;
 
                         }
                         conecta.CerrarConexion();

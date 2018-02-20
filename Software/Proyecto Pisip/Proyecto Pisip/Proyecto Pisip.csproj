@@ -86,6 +86,12 @@
     <Compile Include="Actualizar Usuario.Designer.cs">
       <DependentUpon>Actualizar Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambioLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambioLogin.Designer.cs">
+      <DependentUpon>CambioLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Bodega.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conexion.cs" />
@@ -131,6 +137,24 @@
     </Compile>
     <Compile Include="ConsultaProveedor.Designer.cs">
       <DependentUpon>ConsultaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="imprimeProductoCaducados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="imprimeProductoCaducados.Designer.cs">
+      <DependentUpon>imprimeProductoCaducados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimeProductoxProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimeProductoxProveedor.Designer.cs">
+      <DependentUpon>ImprimeProductoxProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimeStockMinimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimeStockMinimo.Designer.cs">
+      <DependentUpon>ImprimeStockMinimo.cs</DependentUpon>
     </Compile>
     <Compile Include="imprimirDetalleFactura.cs">
       <SubType>Form</SubType>
@@ -182,10 +206,34 @@
     <Compile Include="Registro Usuario.Designer.cs">
       <DependentUpon>Registro Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="reporteProductoCaducado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporteProductoCaducado.Designer.cs">
+      <DependentUpon>reporteProductoCaducado.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptDetalleFactura.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptDetalleFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDetalleProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDetalleProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDetalleProdxFechaCaduca.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDetalleProdxFechaCaduca.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptStockMinimo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStockMinimo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Ventas.cs">
@@ -209,6 +257,9 @@
     <EmbeddedResource Include="Actualizar Usuario.resx">
       <DependentUpon>Actualizar Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CambioLogin.resx">
+      <DependentUpon>CambioLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta Bodega.resx">
       <DependentUpon>Consulta Bodega.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +277,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaProveedor.resx">
       <DependentUpon>ConsultaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imprimeProductoCaducados.resx">
+      <DependentUpon>imprimeProductoCaducados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimeProductoxProveedor.resx">
+      <DependentUpon>ImprimeProductoxProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimeStockMinimo.resx">
+      <DependentUpon>ImprimeStockMinimo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="imprimirDetalleFactura.resx">
       <DependentUpon>imprimirDetalleFactura.cs</DependentUpon>
@@ -261,9 +321,24 @@
     <EmbeddedResource Include="Registro Usuario.resx">
       <DependentUpon>Registro Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reporteProductoCaducado.resx">
+      <DependentUpon>reporteProductoCaducado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptDetalleFactura.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDetalleFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDetalleProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDetalleProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDetalleProdxFechaCaduca.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDetalleProdxFechaCaduca.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptStockMinimo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStockMinimo.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
@@ -284,8 +359,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="iconos\cambiarclave.png" />
+    <None Include="iconos\eliminar.png" />
+    <None Include="iconos\editar.png" />
+    <None Include="iconos\salir.png" />
+    <None Include="iconos\impresora.png" />
+    <None Include="iconos\anular.png" />
+    <None Include="iconos\Aceptar.png" />
     <Content Include="iconos\busqueda.png" />
     <Content Include="iconos\busqueda1.png" />
+    <None Include="iconos\guardar.png" />
+    <None Include="iconos\nuevo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

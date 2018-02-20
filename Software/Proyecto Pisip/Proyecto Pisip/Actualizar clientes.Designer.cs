@@ -50,12 +50,12 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -261,68 +261,31 @@
             this.panel5.Controls.Add(this.button5);
             this.panel5.Location = new System.Drawing.Point(17, 78);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(505, 30);
+            this.panel5.Size = new System.Drawing.Size(505, 65);
             this.panel5.TabIndex = 33;
             // 
             // button1
             // 
+            this.button1.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(374, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 53);
             this.button1.TabIndex = 32;
             this.button1.Text = "Salir";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnsalir_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(50, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnbuscar_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(131, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 31;
-            this.button3.Text = "Nuevo";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btnnuevo_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(293, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.btneliminar_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(212, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Modificar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(7, 15);
+            this.dgvClientes.Location = new System.Drawing.Point(7, 14);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(473, 186);
+            this.dgvClientes.Size = new System.Drawing.Size(483, 168);
             this.dgvClientes.TabIndex = 29;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
@@ -330,10 +293,62 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvClientes);
-            this.panel3.Location = new System.Drawing.Point(17, 126);
+            this.panel3.Location = new System.Drawing.Point(17, 149);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(505, 216);
+            this.panel3.Size = new System.Drawing.Size(505, 195);
             this.panel3.TabIndex = 34;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(50, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 53);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Buscar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::Proyecto_Pisip.Properties.Resources.nuevo;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(131, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 53);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "Nuevo";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnnuevo_Click);
+            // 
+            // button4
+            // 
+            this.button4.Image = global::Proyecto_Pisip.Properties.Resources.eliminar;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(293, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 53);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Eliminar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // button5
+            // 
+            this.button5.Image = global::Proyecto_Pisip.Properties.Resources.editar;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(212, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 53);
+            this.button5.TabIndex = 29;
+            this.button5.Text = "Modificar";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // Actualizar_clientes
             // 

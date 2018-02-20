@@ -41,6 +41,10 @@ namespace Proyecto_Pisip
         public void ListaProducto(MySqlConnection conectar, string bNombreProducto)
         {
             dgvProducto.DataSource = Clases.Producto.Busca_Producto(conectar, bNombreProducto);
+            dgvProducto.Columns[1].Visible = false;
+            dgvProducto.Columns[3].Visible = false;
+            dgvProducto.Columns[11].Visible = false;
+            dgvProducto.Columns[12].Visible = false;
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)

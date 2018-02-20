@@ -69,5 +69,29 @@ namespace Proyecto_Pisip
             this.Close();
             this.Dispose();
         }
+
+        private void reporteProductosXProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int codprod;
+            ImprimeProductoxProveedor impProxProv = new ImprimeProductoxProveedor();
+            codprod = 0;
+            impProxProv.CodProducto = codprod;
+            impProxProv.ShowDialog();
+        }
+
+        private void reportesStockMinimoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int codprod;
+            ImprimeStockMinimo impStockMinimo = new ImprimeStockMinimo();
+            codprod = 0;
+            impStockMinimo.codProducto = codprod;
+            impStockMinimo.ShowDialog();
+        }
+
+        private void reportePorFechaCaducidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reporteProductoCaducado repProdCaduca = new reporteProductoCaducado();
+            repProdCaduca.Show();
+        }
     }
 }

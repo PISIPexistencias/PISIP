@@ -34,6 +34,7 @@
             this.Lbpass = new System.Windows.Forms.Label();
             this.Lbuser = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCambioCalve = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btningresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -49,7 +50,7 @@
             this.panel1.Controls.Add(this.Lbuser);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 100);
+            this.panel1.Size = new System.Drawing.Size(317, 100);
             this.panel1.TabIndex = 6;
             // 
             // txtpass
@@ -88,31 +89,51 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnCambioCalve);
             this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btningresar);
             this.panel2.Location = new System.Drawing.Point(13, 120);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(242, 38);
+            this.panel2.Size = new System.Drawing.Size(317, 68);
             this.panel2.TabIndex = 7;
+            // 
+            // btnCambioCalve
+            // 
+            this.btnCambioCalve.Image = global::Proyecto_Pisip.Properties.Resources.cambiarclave;
+            this.btnCambioCalve.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCambioCalve.Location = new System.Drawing.Point(115, 8);
+            this.btnCambioCalve.Name = "btnCambioCalve";
+            this.btnCambioCalve.Size = new System.Drawing.Size(93, 53);
+            this.btnCambioCalve.TabIndex = 8;
+            this.btnCambioCalve.Text = "Cambia Clave";
+            this.btnCambioCalve.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCambioCalve.UseVisualStyleBackColor = true;
+            this.btnCambioCalve.Click += new System.EventHandler(this.btnCambioCalve_Click);
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(138, 8);
+            this.btnsalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnsalir.Location = new System.Drawing.Point(214, 8);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(92, 53);
             this.btnsalir.TabIndex = 7;
             this.btnsalir.Text = "Salir";
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btningresar
             // 
             this.btningresar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btningresar.Location = new System.Drawing.Point(29, 8);
+            this.btningresar.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btningresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btningresar.Location = new System.Drawing.Point(14, 8);
             this.btningresar.Name = "btningresar";
-            this.btningresar.Size = new System.Drawing.Size(75, 23);
+            this.btningresar.Size = new System.Drawing.Size(95, 53);
             this.btningresar.TabIndex = 6;
             this.btningresar.Text = "Ingresar";
+            this.btningresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btningresar.UseVisualStyleBackColor = true;
             this.btningresar.Click += new System.EventHandler(this.btningresar_Click);
             // 
@@ -120,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 170);
+            this.ClientSize = new System.Drawing.Size(342, 200);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -146,6 +167,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btningresar;
+        private System.Windows.Forms.Button btnCambioCalve;
     }
 }
 

@@ -54,8 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblAccion = new System.Windows.Forms.Label();
-            this.btnBuscaFactura = new System.Windows.Forms.Button();
-            this.btnBuscaCliente = new System.Windows.Forms.Button();
             this.txtCodigoCli = new System.Windows.Forms.TextBox();
             this.dtpFechaFactura = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -65,7 +63,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lblCobraIva = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnProducto = new System.Windows.Forms.Button();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
@@ -76,12 +73,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvDetallefatMostrar = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnBuscaFactura = new System.Windows.Forms.Button();
+            this.btnBuscaCliente = new System.Windows.Forms.Button();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -343,28 +343,6 @@
             this.lblAccion.Text = "label8";
             this.lblAccion.Visible = false;
             // 
-            // btnBuscaFactura
-            // 
-            this.btnBuscaFactura.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
-            this.btnBuscaFactura.Location = new System.Drawing.Point(218, 2);
-            this.btnBuscaFactura.Name = "btnBuscaFactura";
-            this.btnBuscaFactura.Size = new System.Drawing.Size(33, 33);
-            this.btnBuscaFactura.TabIndex = 43;
-            this.btnBuscaFactura.Text = "...";
-            this.btnBuscaFactura.UseVisualStyleBackColor = true;
-            this.btnBuscaFactura.Click += new System.EventHandler(this.btnBuscaFactura_Click);
-            // 
-            // btnBuscaCliente
-            // 
-            this.btnBuscaCliente.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
-            this.btnBuscaCliente.Location = new System.Drawing.Point(443, 40);
-            this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(33, 33);
-            this.btnBuscaCliente.TabIndex = 42;
-            this.btnBuscaCliente.Text = "...";
-            this.btnBuscaCliente.UseVisualStyleBackColor = true;
-            this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
-            // 
             // txtCodigoCli
             // 
             this.txtCodigoCli.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -459,17 +437,6 @@
             this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 53;
             this.label2.Text = "IVA";
-            // 
-            // btnProducto
-            // 
-            this.btnProducto.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
-            this.btnProducto.Location = new System.Drawing.Point(257, 10);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(33, 33);
-            this.btnProducto.TabIndex = 52;
-            this.btnProducto.Text = "...";
-            this.btnProducto.UseVisualStyleBackColor = true;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // txtCodProducto
             // 
@@ -567,27 +534,6 @@
             this.panel4.Size = new System.Drawing.Size(607, 76);
             this.panel4.TabIndex = 33;
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Enabled = false;
-            this.btnModificar.Location = new System.Drawing.Point(21, 166);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 34;
-            this.btnModificar.Text = "Anular";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(21, 249);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 35;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -601,36 +547,105 @@
             this.panel5.Size = new System.Drawing.Size(112, 416);
             this.panel5.TabIndex = 36;
             // 
+            // btnBuscaFactura
+            // 
+            this.btnBuscaFactura.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnBuscaFactura.Location = new System.Drawing.Point(218, 2);
+            this.btnBuscaFactura.Name = "btnBuscaFactura";
+            this.btnBuscaFactura.Size = new System.Drawing.Size(33, 33);
+            this.btnBuscaFactura.TabIndex = 43;
+            this.btnBuscaFactura.Text = "...";
+            this.btnBuscaFactura.UseVisualStyleBackColor = true;
+            this.btnBuscaFactura.Click += new System.EventHandler(this.btnBuscaFactura_Click);
+            // 
+            // btnBuscaCliente
+            // 
+            this.btnBuscaCliente.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnBuscaCliente.Location = new System.Drawing.Point(443, 40);
+            this.btnBuscaCliente.Name = "btnBuscaCliente";
+            this.btnBuscaCliente.Size = new System.Drawing.Size(33, 33);
+            this.btnBuscaCliente.TabIndex = 42;
+            this.btnBuscaCliente.Text = "...";
+            this.btnBuscaCliente.UseVisualStyleBackColor = true;
+            this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
+            // 
+            // btnProducto
+            // 
+            this.btnProducto.Image = global::Proyecto_Pisip.Properties.Resources.busqueda1;
+            this.btnProducto.Location = new System.Drawing.Point(257, 10);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(33, 33);
+            this.btnProducto.TabIndex = 52;
+            this.btnProducto.Text = "...";
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
+            // 
             // btnImprimir
             // 
             this.btnImprimir.Enabled = false;
-            this.btnImprimir.Location = new System.Drawing.Point(21, 208);
+            this.btnImprimir.Image = global::Proyecto_Pisip.Properties.Resources.impresora;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnImprimir.Location = new System.Drawing.Point(21, 249);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimir.Size = new System.Drawing.Size(75, 53);
             this.btnImprimir.TabIndex = 38;
             this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(21, 121);
+            this.btnIngresar.Image = global::Proyecto_Pisip.Properties.Resources.guardar;
+            this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnIngresar.Location = new System.Drawing.Point(21, 113);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresar.Size = new System.Drawing.Size(75, 53);
             this.btnIngresar.TabIndex = 37;
             this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(21, 71);
+            this.btnNuevo.Image = global::Proyecto_Pisip.Properties.Resources.nuevo;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNuevo.Location = new System.Drawing.Point(21, 40);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(75, 53);
             this.btnNuevo.TabIndex = 36;
             this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Enabled = false;
+            this.btnModificar.Image = global::Proyecto_Pisip.Properties.Resources.anular;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnModificar.Location = new System.Drawing.Point(21, 181);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 53);
+            this.btnModificar.TabIndex = 34;
+            this.btnModificar.Text = "Anular";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(21, 318);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
+            this.btnSalir.TabIndex = 35;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Ventas
             // 

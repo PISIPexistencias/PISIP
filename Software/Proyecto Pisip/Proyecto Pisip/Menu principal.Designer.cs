@@ -45,6 +45,9 @@
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresoMantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteProductosXProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesStockMinimoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportePorFechaCaducidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +62,7 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(548, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(565, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -182,9 +185,34 @@
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteProductosXProveedorToolStripMenuItem,
+            this.reportesStockMinimoToolStripMenuItem,
+            this.reportePorFechaCaducidadToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.reportesToolStripMenuItem.Text = "Reportes ";
+            // 
+            // reporteProductosXProveedorToolStripMenuItem
+            // 
+            this.reporteProductosXProveedorToolStripMenuItem.Name = "reporteProductosXProveedorToolStripMenuItem";
+            this.reporteProductosXProveedorToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.reporteProductosXProveedorToolStripMenuItem.Text = "Reporte Existencias";
+            this.reporteProductosXProveedorToolStripMenuItem.Click += new System.EventHandler(this.reporteProductosXProveedorToolStripMenuItem_Click);
+            // 
+            // reportesStockMinimoToolStripMenuItem
+            // 
+            this.reportesStockMinimoToolStripMenuItem.Name = "reportesStockMinimoToolStripMenuItem";
+            this.reportesStockMinimoToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.reportesStockMinimoToolStripMenuItem.Text = "Reportes Stock Minimo";
+            this.reportesStockMinimoToolStripMenuItem.Click += new System.EventHandler(this.reportesStockMinimoToolStripMenuItem_Click);
+            // 
+            // reportePorFechaCaducidadToolStripMenuItem
+            // 
+            this.reportePorFechaCaducidadToolStripMenuItem.Name = "reportePorFechaCaducidadToolStripMenuItem";
+            this.reportePorFechaCaducidadToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.reportePorFechaCaducidadToolStripMenuItem.Text = "Reporte por Fecha Caducidad";
+            this.reportePorFechaCaducidadToolStripMenuItem.Click += new System.EventHandler(this.reportePorFechaCaducidadToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -196,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 315);
+            this.ClientSize = new System.Drawing.Size(565, 330);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu_principal";
@@ -230,5 +258,8 @@
         private System.Windows.Forms.ToolStripMenuItem ingresoMantenimientoToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem ventaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteProductosXProveedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesStockMinimoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportePorFechaCaducidadToolStripMenuItem;
     }
 }
