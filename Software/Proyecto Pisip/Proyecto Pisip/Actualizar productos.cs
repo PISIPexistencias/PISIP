@@ -22,6 +22,7 @@ namespace Proyecto_Pisip
 
         private void Actualizar_productos_Load(object sender, EventArgs e)
         {
+            txtNombreProducto.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)

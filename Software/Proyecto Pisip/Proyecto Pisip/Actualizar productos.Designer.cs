@@ -56,6 +56,7 @@
             // txtNombreProducto
             // 
             this.txtNombreProducto.Location = new System.Drawing.Point(93, 24);
+            this.txtNombreProducto.MaxLength = 50;
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(139, 20);
             this.txtNombreProducto.TabIndex = 2;
@@ -63,12 +64,12 @@
             // dgvProducto
             // 
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducto.Location = new System.Drawing.Point(16, 16);
+            this.dgvProducto.Location = new System.Drawing.Point(15, 16);
             this.dgvProducto.MultiSelect = false;
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.ReadOnly = true;
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducto.Size = new System.Drawing.Size(447, 126);
+            this.dgvProducto.Size = new System.Drawing.Size(447, 97);
             this.dgvProducto.TabIndex = 3;
             // 
             // panel1
@@ -89,56 +90,71 @@
             this.panel2.Controls.Add(this.btnmodificar);
             this.panel2.Location = new System.Drawing.Point(12, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(479, 30);
+            this.panel2.Size = new System.Drawing.Size(479, 59);
             this.panel2.TabIndex = 36;
             // 
             // btnsalir
             // 
+            this.btnsalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnsalir.Location = new System.Drawing.Point(374, 3);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(75, 53);
             this.btnsalir.TabIndex = 32;
             this.btnsalir.Text = "Salir";
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(50, 3);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 2;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnnuevo
             // 
+            this.btnnuevo.Image = global::Proyecto_Pisip.Properties.Resources.nuevo;
+            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnnuevo.Location = new System.Drawing.Point(131, 3);
             this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnnuevo.Size = new System.Drawing.Size(75, 53);
             this.btnnuevo.TabIndex = 31;
             this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // btneliminar
             // 
+            this.btneliminar.Image = global::Proyecto_Pisip.Properties.Resources.eliminar;
+            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btneliminar.Location = new System.Drawing.Point(293, 3);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(75, 23);
+            this.btneliminar.Size = new System.Drawing.Size(75, 53);
             this.btneliminar.TabIndex = 30;
             this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
+            this.btnmodificar.Image = global::Proyecto_Pisip.Properties.Resources.editar;
+            this.btnmodificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnmodificar.Location = new System.Drawing.Point(212, 3);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(75, 23);
+            this.btnmodificar.Size = new System.Drawing.Size(75, 53);
             this.btnmodificar.TabIndex = 29;
             this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
@@ -146,9 +162,9 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvProducto);
-            this.panel3.Location = new System.Drawing.Point(12, 100);
+            this.panel3.Location = new System.Drawing.Point(12, 129);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(479, 157);
+            this.panel3.Size = new System.Drawing.Size(479, 130);
             this.panel3.TabIndex = 37;
             // 
             // Actualizar_productos

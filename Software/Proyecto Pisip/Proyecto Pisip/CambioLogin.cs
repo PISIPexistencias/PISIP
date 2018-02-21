@@ -26,7 +26,9 @@ namespace Proyecto_Pisip
 
         private void CambioLogin_Load(object sender, EventArgs e)
         {
-            
+            txtClaveActual.CharacterCasing = CharacterCasing.Upper;
+            txtClaveNueva.CharacterCasing = CharacterCasing.Upper;
+            txtComfirmaClave.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void btnCambiar_Click(object sender, EventArgs e)

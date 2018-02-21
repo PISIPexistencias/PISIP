@@ -46,9 +46,9 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvProveedor);
-            this.panel3.Location = new System.Drawing.Point(12, 92);
+            this.panel3.Location = new System.Drawing.Point(12, 127);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(335, 184);
+            this.panel3.Size = new System.Drawing.Size(335, 150);
             this.panel3.TabIndex = 40;
             // 
             // dgvProveedor
@@ -59,7 +59,7 @@
             this.dgvProveedor.Name = "dgvProveedor";
             this.dgvProveedor.ReadOnly = true;
             this.dgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProveedor.Size = new System.Drawing.Size(304, 153);
+            this.dgvProveedor.Size = new System.Drawing.Size(304, 126);
             this.dgvProveedor.TabIndex = 28;
             // 
             // panel1
@@ -73,26 +73,32 @@
             this.panel1.Controls.Add(this.txtNomProveedor);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 74);
+            this.panel1.Size = new System.Drawing.Size(335, 109);
             this.panel1.TabIndex = 39;
             // 
             // btnSalir
             // 
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSalir.Location = new System.Drawing.Point(194, 46);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
             this.btnSalir.TabIndex = 27;
             this.btnSalir.Text = "Seleccionar";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(58, 46);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 25;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
@@ -108,9 +114,11 @@
             // txtCodProveedor
             // 
             this.txtCodProveedor.Location = new System.Drawing.Point(49, 11);
+            this.txtCodProveedor.MaxLength = 10;
             this.txtCodProveedor.Name = "txtCodProveedor";
             this.txtCodProveedor.Size = new System.Drawing.Size(67, 20);
             this.txtCodProveedor.TabIndex = 22;
+            this.txtCodProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProveedor_KeyPress);
             // 
             // label4
             // 
@@ -124,9 +132,11 @@
             // txtNomProveedor
             // 
             this.txtNomProveedor.Location = new System.Drawing.Point(195, 11);
+            this.txtNomProveedor.MaxLength = 80;
             this.txtNomProveedor.Name = "txtNomProveedor";
-            this.txtNomProveedor.Size = new System.Drawing.Size(75, 20);
+            this.txtNomProveedor.Size = new System.Drawing.Size(104, 20);
             this.txtNomProveedor.TabIndex = 24;
+            this.txtNomProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomProveedor_KeyPress);
             // 
             // ConsultaProveedor
             // 

@@ -130,6 +130,8 @@
             // 
             // txtSucursalProducto
             // 
+            this.txtSucursalProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtSucursalProducto.Enabled = false;
             this.txtSucursalProducto.Location = new System.Drawing.Point(108, 41);
             this.txtSucursalProducto.Name = "txtSucursalProducto";
             this.txtSucursalProducto.Size = new System.Drawing.Size(100, 20);
@@ -137,6 +139,8 @@
             // 
             // txtNomProvProducto
             // 
+            this.txtNomProvProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtNomProvProducto.Enabled = false;
             this.txtNomProvProducto.Location = new System.Drawing.Point(121, 82);
             this.txtNomProvProducto.Name = "txtNomProvProducto";
             this.txtNomProvProducto.Size = new System.Drawing.Size(100, 20);
@@ -154,16 +158,20 @@
             // txtPrecioCompraProducto
             // 
             this.txtPrecioCompraProducto.Location = new System.Drawing.Point(374, 44);
+            this.txtPrecioCompraProducto.MaxLength = 8;
             this.txtPrecioCompraProducto.Name = "txtPrecioCompraProducto";
             this.txtPrecioCompraProducto.Size = new System.Drawing.Size(69, 20);
             this.txtPrecioCompraProducto.TabIndex = 10;
+            this.txtPrecioCompraProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCompraProducto_KeyPress);
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.Location = new System.Drawing.Point(374, 12);
+            this.txtNombreProducto.MaxLength = 50;
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(122, 20);
             this.txtNombreProducto.TabIndex = 12;
+            this.txtNombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProducto_KeyPress);
             // 
             // label7
             // 
@@ -177,16 +185,20 @@
             // txtStockMinProducto
             // 
             this.txtStockMinProducto.Location = new System.Drawing.Point(108, 130);
+            this.txtStockMinProducto.MaxLength = 8;
             this.txtStockMinProducto.Name = "txtStockMinProducto";
             this.txtStockMinProducto.Size = new System.Drawing.Size(52, 20);
             this.txtStockMinProducto.TabIndex = 14;
+            this.txtStockMinProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockMinProducto_KeyPress);
             // 
             // txtPrecioVentaProducto
             // 
             this.txtPrecioVentaProducto.Location = new System.Drawing.Point(374, 72);
+            this.txtPrecioVentaProducto.MaxLength = 8;
             this.txtPrecioVentaProducto.Name = "txtPrecioVentaProducto";
             this.txtPrecioVentaProducto.Size = new System.Drawing.Size(69, 20);
             this.txtPrecioVentaProducto.TabIndex = 15;
+            this.txtPrecioVentaProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVentaProducto_KeyPress);
             // 
             // label8
             // 
@@ -208,21 +220,27 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(14, 46);
+            this.btnAceptar.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAceptar.Location = new System.Drawing.Point(14, 32);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(75, 53);
             this.btnAceptar.TabIndex = 18;
             this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(14, 100);
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(14, 103);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
             this.btnSalir.TabIndex = 19;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -277,9 +295,11 @@
             // txtnuevoStock
             // 
             this.txtnuevoStock.Location = new System.Drawing.Point(214, 98);
+            this.txtnuevoStock.MaxLength = 8;
             this.txtnuevoStock.Name = "txtnuevoStock";
             this.txtnuevoStock.Size = new System.Drawing.Size(42, 20);
             this.txtnuevoStock.TabIndex = 43;
+            this.txtnuevoStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnuevoStock_KeyPress);
             // 
             // lblAccion
             // 
@@ -293,6 +313,8 @@
             // 
             // txtCodProvProducto
             // 
+            this.txtCodProvProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtCodProvProducto.Enabled = false;
             this.txtCodProvProducto.Location = new System.Drawing.Point(66, 69);
             this.txtCodProvProducto.Name = "txtCodProvProducto";
             this.txtCodProvProducto.Size = new System.Drawing.Size(36, 20);
@@ -300,6 +322,8 @@
             // 
             // txtcodBodProducto
             // 
+            this.txtcodBodProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtcodBodProducto.Enabled = false;
             this.txtcodBodProducto.Location = new System.Drawing.Point(66, 41);
             this.txtcodBodProducto.Name = "txtcodBodProducto";
             this.txtcodBodProducto.Size = new System.Drawing.Size(36, 20);

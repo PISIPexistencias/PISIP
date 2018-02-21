@@ -21,6 +21,7 @@ namespace Proyecto_Pisip
 
         private void Consulta_Producto_Load(object sender, EventArgs e)
         {
+            txtNombreProducto.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)

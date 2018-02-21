@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Consulta_Cliente : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         public Consulta_Cliente()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace Proyecto_Pisip
 
         private void Consulta_Cliente_Load(object sender, EventArgs e)
         {
+            txtApellidoCli.CharacterCasing = CharacterCasing.Upper;
+            txtNombreCli.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
@@ -65,6 +68,21 @@ namespace Proyecto_Pisip
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtCedulaCli_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtApellidoCli_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txtNombreCli_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

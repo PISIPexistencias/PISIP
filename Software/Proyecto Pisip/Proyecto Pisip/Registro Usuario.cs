@@ -15,6 +15,7 @@ namespace Proyecto_Pisip
     public partial class Registro_Usuario : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         Clases.Usuario Usuarioseleccionado { get; set; }
         public Registro_Usuario()
         {
@@ -23,6 +24,8 @@ namespace Proyecto_Pisip
 
         private void Registro_Usuario_Load(object sender, EventArgs e)
         {
+            txtcodigo.CharacterCasing = CharacterCasing.Upper;
+            txtClaveUsu.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 Clases.Usuario pUsuario = new Clases.Usuario();
@@ -165,6 +168,11 @@ namespace Proyecto_Pisip
                 MessageBox.Show(ex.Message);
                 this.Close();
             }
+        }
+
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

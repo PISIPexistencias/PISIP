@@ -49,32 +49,39 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 82);
+            this.panel1.Size = new System.Drawing.Size(296, 120);
             this.panel1.TabIndex = 38;
             // 
             // btnSalir
             // 
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSalir.Location = new System.Drawing.Point(172, 54);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
             this.btnSalir.TabIndex = 29;
             this.btnSalir.Text = "Seleccionar";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(41, 54);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 28;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.Location = new System.Drawing.Point(73, 12);
+            this.txtNombreProducto.MaxLength = 50;
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(139, 20);
             this.txtNombreProducto.TabIndex = 4;
@@ -92,20 +99,20 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvProducto);
-            this.panel3.Location = new System.Drawing.Point(12, 100);
+            this.panel3.Location = new System.Drawing.Point(12, 138);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 157);
+            this.panel3.Size = new System.Drawing.Size(296, 124);
             this.panel3.TabIndex = 39;
             // 
             // dgvProducto
             // 
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducto.Location = new System.Drawing.Point(16, 16);
+            this.dgvProducto.Location = new System.Drawing.Point(8, 12);
             this.dgvProducto.MultiSelect = false;
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.ReadOnly = true;
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducto.Size = new System.Drawing.Size(258, 126);
+            this.dgvProducto.Size = new System.Drawing.Size(258, 101);
             this.dgvProducto.TabIndex = 3;
             // 
             // Consulta_Producto

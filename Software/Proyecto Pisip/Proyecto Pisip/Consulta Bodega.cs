@@ -15,6 +15,7 @@ namespace Proyecto_Pisip.Clases
     public partial class Consulta_Bodega : Form
     {
         Conexion conecta = new Conexion();
+        Validacion valida = new Validacion();
         public Consulta_Bodega()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Proyecto_Pisip.Clases
 
         private void Consulta_Bodega_Load(object sender, EventArgs e)
         {
+            txtSucursal.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
@@ -66,6 +68,11 @@ namespace Proyecto_Pisip.Clases
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSucursal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

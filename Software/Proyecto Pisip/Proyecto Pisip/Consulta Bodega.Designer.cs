@@ -44,20 +44,20 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvBodega);
-            this.panel3.Location = new System.Drawing.Point(12, 92);
+            this.panel3.Location = new System.Drawing.Point(12, 131);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(335, 184);
+            this.panel3.Size = new System.Drawing.Size(335, 157);
             this.panel3.TabIndex = 42;
             // 
             // dgvBodega
             // 
             this.dgvBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBodega.Location = new System.Drawing.Point(6, 13);
+            this.dgvBodega.Location = new System.Drawing.Point(19, 13);
             this.dgvBodega.MultiSelect = false;
             this.dgvBodega.Name = "dgvBodega";
             this.dgvBodega.ReadOnly = true;
             this.dgvBodega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBodega.Size = new System.Drawing.Size(304, 153);
+            this.dgvBodega.Size = new System.Drawing.Size(304, 129);
             this.dgvBodega.TabIndex = 28;
             // 
             // panel1
@@ -69,26 +69,32 @@
             this.panel1.Controls.Add(this.txtSucursal);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(335, 74);
+            this.panel1.Size = new System.Drawing.Size(335, 113);
             this.panel1.TabIndex = 41;
             // 
             // btnSalir
             // 
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSalir.Location = new System.Drawing.Point(194, 46);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
             this.btnSalir.TabIndex = 27;
             this.btnSalir.Text = "Seleccionar";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(58, 46);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 25;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
@@ -104,9 +110,11 @@
             // txtSucursal
             // 
             this.txtSucursal.Location = new System.Drawing.Point(70, 11);
+            this.txtSucursal.MaxLength = 40;
             this.txtSucursal.Name = "txtSucursal";
-            this.txtSucursal.Size = new System.Drawing.Size(75, 20);
+            this.txtSucursal.Size = new System.Drawing.Size(156, 20);
             this.txtSucursal.TabIndex = 24;
+            this.txtSucursal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSucursal_KeyPress);
             // 
             // Consulta_Bodega
             // 

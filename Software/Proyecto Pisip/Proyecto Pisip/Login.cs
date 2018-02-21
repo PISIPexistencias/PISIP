@@ -13,6 +13,7 @@ namespace Proyecto_Pisip
 {
     public partial class Login : Form
     {
+        Clases.Validacion valida = new Clases.Validacion();
         public Login()
         {
             InitializeComponent();
@@ -20,7 +21,8 @@ namespace Proyecto_Pisip
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            txtpass.CharacterCasing = CharacterCasing.Upper;
+            txtuser.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void btningresar_Click(object sender, EventArgs e)
@@ -126,6 +128,11 @@ namespace Proyecto_Pisip
                 MessageBox.Show(ex.Message,"Error",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
             }
             
+        }
+
+        private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

@@ -59,56 +59,71 @@
             this.panel2.Controls.Add(this.btnmodificar);
             this.panel2.Location = new System.Drawing.Point(12, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 30);
+            this.panel2.Size = new System.Drawing.Size(505, 62);
             this.panel2.TabIndex = 38;
             // 
             // btnsalir
             // 
+            this.btnsalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnsalir.Location = new System.Drawing.Point(374, 3);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(75, 53);
             this.btnsalir.TabIndex = 32;
             this.btnsalir.Text = "Salir";
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(50, 3);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 2;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnnuevo
             // 
+            this.btnnuevo.Image = global::Proyecto_Pisip.Properties.Resources.nuevo;
+            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnnuevo.Location = new System.Drawing.Point(131, 3);
             this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnnuevo.Size = new System.Drawing.Size(75, 53);
             this.btnnuevo.TabIndex = 31;
             this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // btneliminar
             // 
+            this.btneliminar.Image = global::Proyecto_Pisip.Properties.Resources.eliminar;
+            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btneliminar.Location = new System.Drawing.Point(293, 3);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(75, 23);
+            this.btneliminar.Size = new System.Drawing.Size(75, 53);
             this.btneliminar.TabIndex = 30;
             this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
+            this.btnmodificar.Image = global::Proyecto_Pisip.Properties.Resources.editar;
+            this.btnmodificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnmodificar.Location = new System.Drawing.Point(212, 3);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(75, 23);
+            this.btnmodificar.Size = new System.Drawing.Size(75, 53);
             this.btnmodificar.TabIndex = 29;
             this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
@@ -116,20 +131,20 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvUsuario);
-            this.panel3.Location = new System.Drawing.Point(12, 124);
+            this.panel3.Location = new System.Drawing.Point(12, 144);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(505, 216);
+            this.panel3.Size = new System.Drawing.Size(505, 182);
             this.panel3.TabIndex = 39;
             // 
             // dgvUsuario
             // 
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.Location = new System.Drawing.Point(7, 13);
+            this.dgvUsuario.Location = new System.Drawing.Point(6, 12);
             this.dgvUsuario.MultiSelect = false;
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
             this.dgvUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuario.Size = new System.Drawing.Size(482, 186);
+            this.dgvUsuario.Size = new System.Drawing.Size(482, 157);
             this.dgvUsuario.TabIndex = 28;
             // 
             // panel1
@@ -158,9 +173,11 @@
             // txtCodUsuario
             // 
             this.txtCodUsuario.Location = new System.Drawing.Point(49, 11);
+            this.txtCodUsuario.MaxLength = 10;
             this.txtCodUsuario.Name = "txtCodUsuario";
             this.txtCodUsuario.Size = new System.Drawing.Size(67, 20);
             this.txtCodUsuario.TabIndex = 22;
+            this.txtCodUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodUsuario_KeyPress);
             // 
             // label3
             // 
@@ -174,9 +191,11 @@
             // txtApellidoUsu
             // 
             this.txtApellidoUsu.Location = new System.Drawing.Point(193, 11);
+            this.txtApellidoUsu.MaxLength = 50;
             this.txtApellidoUsu.Name = "txtApellidoUsu";
             this.txtApellidoUsu.Size = new System.Drawing.Size(103, 20);
             this.txtApellidoUsu.TabIndex = 23;
+            this.txtApellidoUsu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoUsu_KeyPress);
             // 
             // label4
             // 
@@ -190,15 +209,17 @@
             // txtNombreUsu
             // 
             this.txtNombreUsu.Location = new System.Drawing.Point(374, 11);
+            this.txtNombreUsu.MaxLength = 50;
             this.txtNombreUsu.Name = "txtNombreUsu";
             this.txtNombreUsu.Size = new System.Drawing.Size(106, 20);
             this.txtNombreUsu.TabIndex = 24;
+            this.txtNombreUsu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreUsu_KeyPress);
             // 
             // Actualizar_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 347);
+            this.ClientSize = new System.Drawing.Size(532, 336);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

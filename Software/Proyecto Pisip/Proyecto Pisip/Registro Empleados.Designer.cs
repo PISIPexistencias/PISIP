@@ -73,34 +73,43 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(17, 64);
+            this.btnagregar.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnagregar.Location = new System.Drawing.Point(17, 41);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(75, 23);
+            this.btnagregar.Size = new System.Drawing.Size(75, 53);
             this.btnagregar.TabIndex = 14;
             this.btnagregar.Text = "Aceptar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // txtnombres
             // 
             this.txtnombres.Location = new System.Drawing.Point(140, 127);
+            this.txtnombres.MaxLength = 50;
             this.txtnombres.Name = "txtnombres";
             this.txtnombres.Size = new System.Drawing.Size(159, 20);
             this.txtnombres.TabIndex = 28;
+            this.txtnombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombres_KeyPress);
             // 
             // txtapellidos
             // 
             this.txtapellidos.Location = new System.Drawing.Point(140, 97);
+            this.txtapellidos.MaxLength = 50;
             this.txtapellidos.Name = "txtapellidos";
             this.txtapellidos.Size = new System.Drawing.Size(159, 20);
             this.txtapellidos.TabIndex = 27;
+            this.txtapellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidos_KeyPress);
             // 
             // txtcedula
             // 
             this.txtcedula.Location = new System.Drawing.Point(140, 68);
+            this.txtcedula.MaxLength = 10;
             this.txtcedula.Name = "txtcedula";
             this.txtcedula.Size = new System.Drawing.Size(72, 20);
             this.txtcedula.TabIndex = 26;
+            this.txtcedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcedula_KeyPress);
             // 
             // label4
             // 
@@ -131,11 +140,14 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(17, 111);
+            this.btnsalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnsalir.Location = new System.Drawing.Point(17, 141);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(75, 53);
             this.btnsalir.TabIndex = 15;
             this.btnsalir.Text = "Salir";
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
@@ -151,9 +163,11 @@
             // txtcargo
             // 
             this.txtcargo.Location = new System.Drawing.Point(140, 159);
+            this.txtcargo.MaxLength = 50;
             this.txtcargo.Name = "txtcargo";
             this.txtcargo.Size = new System.Drawing.Size(136, 20);
             this.txtcargo.TabIndex = 29;
+            this.txtcargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcargo_KeyPress);
             // 
             // label7
             // 

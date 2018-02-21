@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Actualizar_Usuario : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         public Actualizar_Usuario()
         {
             InitializeComponent();
@@ -21,6 +22,9 @@ namespace Proyecto_Pisip
 
         private void Actualizar_Usuario_Load(object sender, EventArgs e)
         {
+            txtCodUsuario.CharacterCasing = CharacterCasing.Upper;
+            txtApellidoUsu.CharacterCasing = CharacterCasing.Upper;
+            txtNombreUsu.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
@@ -122,6 +126,23 @@ namespace Proyecto_Pisip
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtCodUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+
+        }
+
+        private void txtApellidoUsu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+
+        }
+
+        private void txtNombreUsu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

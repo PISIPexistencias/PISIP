@@ -107,21 +107,27 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(22, 58);
+            this.btnAceptar.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAceptar.Location = new System.Drawing.Point(22, 44);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(75, 53);
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(313, 117);
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(22, 127);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -137,37 +143,48 @@
             // txtRuc
             // 
             this.txtRuc.Location = new System.Drawing.Point(109, 70);
+            this.txtRuc.MaxLength = 13;
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(59, 20);
             this.txtRuc.TabIndex = 9;
+            this.txtRuc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRuc_KeyPress);
             // 
             // txtProveedor
             // 
             this.txtProveedor.Location = new System.Drawing.Point(109, 96);
+            this.txtProveedor.MaxLength = 80;
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(144, 20);
             this.txtProveedor.TabIndex = 10;
+            this.txtProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProveedor_KeyPress);
             // 
             // txtContacto
             // 
             this.txtContacto.Location = new System.Drawing.Point(109, 122);
+            this.txtContacto.MaxLength = 80;
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(144, 20);
             this.txtContacto.TabIndex = 11;
+            this.txtContacto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContacto_KeyPress);
             // 
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(109, 148);
+            this.txtDireccion.MaxLength = 50;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(144, 20);
             this.txtDireccion.TabIndex = 12;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
+            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
             // txtFono
             // 
             this.txtFono.Location = new System.Drawing.Point(109, 174);
+            this.txtFono.MaxLength = 10;
             this.txtFono.Name = "txtFono";
             this.txtFono.Size = new System.Drawing.Size(59, 20);
             this.txtFono.TabIndex = 13;
+            this.txtFono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFono_KeyPress);
             // 
             // panel1
             // 
@@ -215,6 +232,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnAceptar);
+            this.panel2.Controls.Add(this.btnSalir);
             this.panel2.Location = new System.Drawing.Point(290, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(122, 222);
@@ -231,7 +249,6 @@
             this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.txtRuc);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);

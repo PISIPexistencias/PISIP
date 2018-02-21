@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Actualizar_clientes : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
 
         public Actualizar_clientes()
         {
@@ -27,6 +28,8 @@ namespace Proyecto_Pisip
 
         private void Actualizar_clientes_Load(object sender, EventArgs e)
         {
+            txt_ape_actualizar.CharacterCasing = CharacterCasing.Upper;
+            txt_nom_actualizar.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
@@ -143,6 +146,21 @@ namespace Proyecto_Pisip
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txt_ced_actualizar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txt_ape_actualizar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txt_nom_actualizar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

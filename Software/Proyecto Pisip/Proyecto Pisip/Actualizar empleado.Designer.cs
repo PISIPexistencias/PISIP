@@ -75,9 +75,11 @@
             // txtCedEmpleado
             // 
             this.txtCedEmpleado.Location = new System.Drawing.Point(49, 11);
+            this.txtCedEmpleado.MaxLength = 10;
             this.txtCedEmpleado.Name = "txtCedEmpleado";
             this.txtCedEmpleado.Size = new System.Drawing.Size(67, 20);
             this.txtCedEmpleado.TabIndex = 22;
+            this.txtCedEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedEmpleado_KeyPress);
             // 
             // label3
             // 
@@ -91,9 +93,11 @@
             // txtApeEmpleado
             // 
             this.txtApeEmpleado.Location = new System.Drawing.Point(193, 11);
+            this.txtApeEmpleado.MaxLength = 50;
             this.txtApeEmpleado.Name = "txtApeEmpleado";
             this.txtApeEmpleado.Size = new System.Drawing.Size(103, 20);
             this.txtApeEmpleado.TabIndex = 23;
+            this.txtApeEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApeEmpleado_KeyPress);
             // 
             // label4
             // 
@@ -107,9 +111,11 @@
             // txtNomEmpleado
             // 
             this.txtNomEmpleado.Location = new System.Drawing.Point(374, 11);
+            this.txtNomEmpleado.MaxLength = 50;
             this.txtNomEmpleado.Name = "txtNomEmpleado";
             this.txtNomEmpleado.Size = new System.Drawing.Size(106, 20);
             this.txtNomEmpleado.TabIndex = 24;
+            this.txtNomEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomEmpleado_KeyPress);
             // 
             // panel2
             // 
@@ -121,56 +127,71 @@
             this.panel2.Controls.Add(this.btnmodificar);
             this.panel2.Location = new System.Drawing.Point(12, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 30);
+            this.panel2.Size = new System.Drawing.Size(505, 66);
             this.panel2.TabIndex = 35;
             // 
             // btnsalir
             // 
+            this.btnsalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnsalir.Location = new System.Drawing.Point(374, 3);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(75, 53);
             this.btnsalir.TabIndex = 32;
             this.btnsalir.Text = "Salir";
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(50, 3);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 2;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btnnuevo
             // 
+            this.btnnuevo.Image = global::Proyecto_Pisip.Properties.Resources.nuevo;
+            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnnuevo.Location = new System.Drawing.Point(131, 3);
             this.btnnuevo.Name = "btnnuevo";
-            this.btnnuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnnuevo.Size = new System.Drawing.Size(75, 53);
             this.btnnuevo.TabIndex = 31;
             this.btnnuevo.Text = "Nuevo";
+            this.btnnuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnnuevo.UseVisualStyleBackColor = true;
             this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // btneliminar
             // 
+            this.btneliminar.Image = global::Proyecto_Pisip.Properties.Resources.eliminar;
+            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btneliminar.Location = new System.Drawing.Point(293, 3);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(75, 23);
+            this.btneliminar.Size = new System.Drawing.Size(75, 53);
             this.btneliminar.TabIndex = 30;
             this.btneliminar.Text = "Eliminar";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
+            this.btnmodificar.Image = global::Proyecto_Pisip.Properties.Resources.editar;
+            this.btnmodificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnmodificar.Location = new System.Drawing.Point(212, 3);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(75, 23);
+            this.btnmodificar.Size = new System.Drawing.Size(75, 53);
             this.btnmodificar.TabIndex = 29;
             this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
@@ -178,20 +199,20 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvEmpleado);
-            this.panel3.Location = new System.Drawing.Point(12, 124);
+            this.panel3.Location = new System.Drawing.Point(12, 148);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(505, 216);
+            this.panel3.Size = new System.Drawing.Size(505, 199);
             this.panel3.TabIndex = 36;
             // 
             // dgvEmpleado
             // 
             this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleado.Location = new System.Drawing.Point(7, 13);
+            this.dgvEmpleado.Location = new System.Drawing.Point(6, 12);
             this.dgvEmpleado.MultiSelect = false;
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.ReadOnly = true;
             this.dgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleado.Size = new System.Drawing.Size(482, 186);
+            this.dgvEmpleado.Size = new System.Drawing.Size(482, 171);
             this.dgvEmpleado.TabIndex = 28;
             // 
             // Actualizar_empleado

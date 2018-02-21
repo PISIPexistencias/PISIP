@@ -15,6 +15,7 @@ namespace Proyecto_Pisip
     public partial class Registro_productos : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         public Clases.Producto ProductoSeleccionado { get; set; }
         public Registro_productos()
         {
@@ -55,6 +56,7 @@ namespace Proyecto_Pisip
 
         private void Registro_productos_Load(object sender, EventArgs e)
         {
+            txtNombreProducto.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (lblAccion.Text == "I")
@@ -204,6 +206,31 @@ namespace Proyecto_Pisip
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtnuevoStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtStockMinProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtNombreProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtPrecioCompraProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtPrecioVentaProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
         }
     }
 }

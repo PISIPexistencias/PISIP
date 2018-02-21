@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Registro_clientes : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         public Clases.Cliente ClienteSeleccionado { get; set; }
        
         public Registro_clientes()
@@ -23,6 +24,10 @@ namespace Proyecto_Pisip
 
         private void Registro_clientes_Load(object sender, EventArgs e)
         {
+            txtapellidos.CharacterCasing = CharacterCasing.Upper;
+            txtnombres.CharacterCasing = CharacterCasing.Upper;
+            txtmail.CharacterCasing = CharacterCasing.Upper;
+            txtdireccion.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (lblAccion.Text == "I")
@@ -131,6 +136,31 @@ namespace Proyecto_Pisip
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtapellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txtnombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtdireccion_TextChanged(object sender, EventArgs e)
         {
 
         }

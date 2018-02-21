@@ -15,6 +15,7 @@ namespace Proyecto_Pisip
     public partial class ConsultaProveedor : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
 
         public ConsultaProveedor()
         {
@@ -23,6 +24,7 @@ namespace Proyecto_Pisip
 
         private void ConsultaProveedor_Load(object sender, EventArgs e)
         {
+            txtNomProveedor.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
@@ -71,6 +73,16 @@ namespace Proyecto_Pisip
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtCodProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtNomProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

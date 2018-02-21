@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Actualizar_empleado : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         public Actualizar_empleado()
         {
             InitializeComponent();
@@ -39,6 +40,8 @@ namespace Proyecto_Pisip
 
         private void Actualizar_empleado_Load(object sender, EventArgs e)
         {
+            txtApeEmpleado.CharacterCasing = CharacterCasing.Upper;
+            txtNomEmpleado.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
@@ -120,6 +123,21 @@ namespace Proyecto_Pisip
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtCedEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtApeEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txtNomEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Registro_proveedor : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         public Clases.Proveedor ProveedorSeleccionado { get; set; }
         public Registro_proveedor()
         {
@@ -22,6 +23,9 @@ namespace Proyecto_Pisip
 
         private void Registro_proveedor_Load(object sender, EventArgs e)
         {
+            txtProveedor.CharacterCasing = CharacterCasing.Upper;
+            txtContacto.CharacterCasing = CharacterCasing.Upper;
+            txtDireccion.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (lblAccion.Text == "I")
@@ -144,6 +148,36 @@ namespace Proyecto_Pisip
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void txtRuc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txtContacto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
         }
     }
 }

@@ -48,20 +48,20 @@
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.dgvClientes);
-            this.panel6.Location = new System.Drawing.Point(12, 103);
+            this.panel6.Location = new System.Drawing.Point(12, 138);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(457, 216);
+            this.panel6.Size = new System.Drawing.Size(457, 176);
             this.panel6.TabIndex = 36;
             // 
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(7, 13);
+            this.dgvClientes.Location = new System.Drawing.Point(7, 8);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(433, 186);
+            this.dgvClientes.Size = new System.Drawing.Size(433, 163);
             this.dgvClientes.TabIndex = 28;
             // 
             // panel4
@@ -77,26 +77,32 @@
             this.panel4.Controls.Add(this.txtNombreCli);
             this.panel4.Location = new System.Drawing.Point(12, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(457, 85);
+            this.panel4.Size = new System.Drawing.Size(457, 118);
             this.panel4.TabIndex = 35;
             // 
             // btnSalir
             // 
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSalir.Location = new System.Drawing.Point(293, 57);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
             this.btnSalir.TabIndex = 29;
             this.btnSalir.Text = "Seleccionar";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(112, 57);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 28;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
@@ -112,9 +118,11 @@
             // txtCedulaCli
             // 
             this.txtCedulaCli.Location = new System.Drawing.Point(49, 11);
+            this.txtCedulaCli.MaxLength = 10;
             this.txtCedulaCli.Name = "txtCedulaCli";
             this.txtCedulaCli.Size = new System.Drawing.Size(67, 20);
             this.txtCedulaCli.TabIndex = 22;
+            this.txtCedulaCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedulaCli_KeyPress);
             // 
             // label5
             // 
@@ -128,9 +136,11 @@
             // txtApellidoCli
             // 
             this.txtApellidoCli.Location = new System.Drawing.Point(177, 11);
+            this.txtApellidoCli.MaxLength = 50;
             this.txtApellidoCli.Name = "txtApellidoCli";
             this.txtApellidoCli.Size = new System.Drawing.Size(86, 20);
             this.txtApellidoCli.TabIndex = 23;
+            this.txtApellidoCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoCli_KeyPress);
             // 
             // label6
             // 
@@ -144,9 +154,11 @@
             // txtNombreCli
             // 
             this.txtNombreCli.Location = new System.Drawing.Point(334, 11);
+            this.txtNombreCli.MaxLength = 50;
             this.txtNombreCli.Name = "txtNombreCli";
             this.txtNombreCli.Size = new System.Drawing.Size(106, 20);
             this.txtNombreCli.TabIndex = 24;
+            this.txtNombreCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCli_KeyPress);
             // 
             // Consulta_Cliente
             // 

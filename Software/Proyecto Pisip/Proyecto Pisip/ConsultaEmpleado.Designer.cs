@@ -48,9 +48,9 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dgvEmpleado);
-            this.panel3.Location = new System.Drawing.Point(12, 92);
+            this.panel3.Location = new System.Drawing.Point(12, 127);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(411, 184);
+            this.panel3.Size = new System.Drawing.Size(411, 150);
             this.panel3.TabIndex = 38;
             // 
             // dgvEmpleado
@@ -61,7 +61,7 @@
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.ReadOnly = true;
             this.dgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleado.Size = new System.Drawing.Size(385, 153);
+            this.dgvEmpleado.Size = new System.Drawing.Size(385, 125);
             this.dgvEmpleado.TabIndex = 28;
             // 
             // panel1
@@ -77,26 +77,32 @@
             this.panel1.Controls.Add(this.txtNomEmpleado);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(411, 74);
+            this.panel1.Size = new System.Drawing.Size(411, 109);
             this.panel1.TabIndex = 37;
             // 
             // btnSalir
             // 
+            this.btnSalir.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSalir.Location = new System.Drawing.Point(212, 46);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 53);
             this.btnSalir.TabIndex = 27;
             this.btnSalir.Text = "Seleccionar";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnbuscar
             // 
+            this.btnbuscar.Image = global::Proyecto_Pisip.Properties.Resources.busqueda;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbuscar.Location = new System.Drawing.Point(96, 46);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(75, 53);
             this.btnbuscar.TabIndex = 25;
             this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
@@ -112,9 +118,11 @@
             // txtCedEmpleado
             // 
             this.txtCedEmpleado.Location = new System.Drawing.Point(49, 11);
+            this.txtCedEmpleado.MaxLength = 10;
             this.txtCedEmpleado.Name = "txtCedEmpleado";
             this.txtCedEmpleado.Size = new System.Drawing.Size(67, 20);
             this.txtCedEmpleado.TabIndex = 22;
+            this.txtCedEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedEmpleado_KeyPress);
             // 
             // label3
             // 
@@ -128,9 +136,11 @@
             // txtApeEmpleado
             // 
             this.txtApeEmpleado.Location = new System.Drawing.Point(177, 11);
+            this.txtApeEmpleado.MaxLength = 50;
             this.txtApeEmpleado.Name = "txtApeEmpleado";
             this.txtApeEmpleado.Size = new System.Drawing.Size(78, 20);
             this.txtApeEmpleado.TabIndex = 23;
+            this.txtApeEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApeEmpleado_KeyPress);
             // 
             // label4
             // 
@@ -144,9 +154,11 @@
             // txtNomEmpleado
             // 
             this.txtNomEmpleado.Location = new System.Drawing.Point(316, 14);
+            this.txtNomEmpleado.MaxLength = 50;
             this.txtNomEmpleado.Name = "txtNomEmpleado";
             this.txtNomEmpleado.Size = new System.Drawing.Size(75, 20);
             this.txtNomEmpleado.TabIndex = 24;
+            this.txtNomEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomEmpleado_KeyPress);
             // 
             // ConsultaEmpleado
             // 

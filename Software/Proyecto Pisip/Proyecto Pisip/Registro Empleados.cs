@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Registro_Empleados : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
         public Clases.Empleado EmpleadoSeleccionado { get; set; }
         public Registro_Empleados()
         {
@@ -22,6 +23,9 @@ namespace Proyecto_Pisip
 
         private void Registro_Empleados_Load(object sender, EventArgs e)
         {
+            txtapellidos.CharacterCasing = CharacterCasing.Upper;
+            txtnombres.CharacterCasing = CharacterCasing.Upper;
+            txtcargo.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (lblAccion.Text == "I")
@@ -165,6 +169,26 @@ namespace Proyecto_Pisip
 
             }
             consultaBodega.Dispose();
+        }
+
+        private void txtcedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtapellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txtnombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
+        }
+
+        private void txtcargo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

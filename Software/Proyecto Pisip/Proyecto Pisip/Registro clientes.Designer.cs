@@ -126,27 +126,34 @@
             // txtcedula
             // 
             this.txtcedula.Location = new System.Drawing.Point(144, 52);
+            this.txtcedula.MaxLength = 10;
             this.txtcedula.Name = "txtcedula";
             this.txtcedula.Size = new System.Drawing.Size(72, 20);
             this.txtcedula.TabIndex = 8;
+            this.txtcedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcedula_KeyPress);
             // 
             // txtapellidos
             // 
             this.txtapellidos.Location = new System.Drawing.Point(144, 81);
+            this.txtapellidos.MaxLength = 50;
             this.txtapellidos.Name = "txtapellidos";
             this.txtapellidos.Size = new System.Drawing.Size(159, 20);
             this.txtapellidos.TabIndex = 9;
+            this.txtapellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidos_KeyPress);
             // 
             // txtnombres
             // 
             this.txtnombres.Location = new System.Drawing.Point(144, 111);
+            this.txtnombres.MaxLength = 50;
             this.txtnombres.Name = "txtnombres";
             this.txtnombres.Size = new System.Drawing.Size(159, 20);
             this.txtnombres.TabIndex = 10;
+            this.txtnombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombres_KeyPress);
             // 
             // txtmail
             // 
             this.txtmail.Location = new System.Drawing.Point(144, 143);
+            this.txtmail.MaxLength = 30;
             this.txtmail.Name = "txtmail";
             this.txtmail.Size = new System.Drawing.Size(98, 20);
             this.txtmail.TabIndex = 11;
@@ -154,34 +161,44 @@
             // txtdireccion
             // 
             this.txtdireccion.Location = new System.Drawing.Point(144, 173);
+            this.txtdireccion.MaxLength = 50;
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(159, 20);
             this.txtdireccion.TabIndex = 12;
+            this.txtdireccion.TextChanged += new System.EventHandler(this.txtdireccion_TextChanged);
             // 
             // txttelefono
             // 
             this.txttelefono.Location = new System.Drawing.Point(144, 207);
+            this.txttelefono.MaxLength = 10;
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(72, 20);
             this.txttelefono.TabIndex = 13;
+            this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefono_KeyPress);
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(17, 64);
+            this.btnagregar.Image = global::Proyecto_Pisip.Properties.Resources.Aceptar;
+            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnagregar.Location = new System.Drawing.Point(17, 39);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(75, 23);
+            this.btnagregar.Size = new System.Drawing.Size(75, 53);
             this.btnagregar.TabIndex = 14;
             this.btnagregar.Text = "Aceptar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(17, 111);
+            this.btnsalir.Image = global::Proyecto_Pisip.Properties.Resources.salir;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnsalir.Location = new System.Drawing.Point(17, 130);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(75, 53);
             this.btnsalir.TabIndex = 15;
             this.btnsalir.Text = "Salir";
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 

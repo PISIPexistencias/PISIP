@@ -14,6 +14,7 @@ namespace Proyecto_Pisip
     public partial class Actualizar_proveedor : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
+        Clases.Validacion valida = new Clases.Validacion();
 
         public Actualizar_proveedor()
         {
@@ -22,6 +23,7 @@ namespace Proyecto_Pisip
 
         private void Actualizar_proveedor_Load(object sender, EventArgs e)
         {
+            txtProveedor.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
@@ -120,6 +122,16 @@ namespace Proyecto_Pisip
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtRucProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.soloNumero(e);
+        }
+
+        private void txtProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            valida.sololetras(e);
         }
     }
 }

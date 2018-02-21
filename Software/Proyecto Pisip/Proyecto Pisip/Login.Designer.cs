@@ -56,6 +56,7 @@
             // txtpass
             // 
             this.txtpass.Location = new System.Drawing.Point(115, 60);
+            this.txtpass.MaxLength = 10;
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(100, 20);
@@ -64,9 +65,11 @@
             // txtuser
             // 
             this.txtuser.Location = new System.Drawing.Point(115, 21);
+            this.txtuser.MaxLength = 10;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(100, 20);
             this.txtuser.TabIndex = 6;
+            this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // Lbpass
             // 

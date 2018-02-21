@@ -50,6 +50,8 @@ namespace Proyecto_Pisip
 
         private void Consulta_Factura_Load(object sender, EventArgs e)
         {
+            txtApeCliFactura.CharacterCasing = CharacterCasing.Upper;
+            txtNomCliFactura.CharacterCasing = CharacterCasing.Upper;
             try
             {
                 if (conecta.AbrirConexion() == true)
