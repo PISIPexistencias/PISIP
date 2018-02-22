@@ -123,147 +123,89 @@ namespace Proyecto_Pisip
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (ValidaResgistros() == true)
-            {
-                try
-                {
-
-                    if (conecta.AbrirConexion() == true)
-                    {
-                        int resultado = 0;
-                        Clases.Producto pProducto = new Clases.Producto();
-                        if (lblAccion.Text == "I")
-                        {
-                            pProducto.Cod_Producto = 0;
-                        }
-                        else
-                        {
-                            pProducto.Cod_Producto = Convert.ToInt32(txtCodProducto.Text);
-                        }
-                        pProducto.Nombre_Producto = txtNombreProducto.Text;
-                        pProducto.Cod_Bod_Producto = Convert.ToInt32(txtcodBodProducto.Text);
-                        pProducto.Sucursal_Bod_Producto = txtSucursalProducto.Text;
-                        pProducto.Cod_Prov_Producto = Convert.ToInt32(txtCodProvProducto.Text);
-                        pProducto.Nombre_Prov_Producto = txtNomProvProducto.Text;
-                        pProducto.Stock_Producto = Convert.ToInt32(txtStockProducto.Text) + Convert.ToInt32(txtnuevoStock.Text);
-                        pProducto.Stock_Min_Producto = Convert.ToInt32(txtStockMinProducto.Text);
-                        pProducto.Precio_Compra_Producto = Convert.ToDouble(txtPrecioCompraProducto.Text);
-                        pProducto.Precio_Venta_Producto = Convert.ToDouble(txtPrecioVentaProducto.Text);
-                        pProducto.Fecha_Caduca_Producto = Convert.ToDateTime(dtpFechaCaducaProducto.Text);
-                        // si cobra IVa=0 No cobra iva=1
-                        if (cmbCobraIva.Text == "SI")
-                        {
-                            pProducto.Iva_Producto = 0;
-                        }
-                        else
-                        {
-                            pProducto.Iva_Producto = 1;
-                        }
-
-                        if (cmbEstado.Text == "Activo")
-                        {
-                            pProducto.Estado_Producto = 0;
-                        }
-                        else
-                        {
-                            pProducto.Estado_Producto = 1;
-                        }
-
-                        switch (lblAccion.Text)
-                        {
-
-                            case "I": resultado = Clases.Producto.AgregarProducto(conecta.conexion, pProducto); break;
-
-                            case "M": resultado = Clases.Producto.ModificarProducto(conecta.conexion, pProducto); break;
-
-                            case "E": resultado = Clases.Producto.EliminarProducto(conecta.conexion, pProducto.Cod_Producto); break;
-
-                        }
-
-
-                        if (resultado > 0)
-                        {
-                            if (lblAccion.Text == "I")
-                            {
-                                MessageBox.Show("Registro Ingresado exitosamente");
-                            }
-                            else if (lblAccion.Text == "M")
-                            {
-                                MessageBox.Show("Registro Actualizado exitosamente");
-                            }
-                            else if (lblAccion.Text == "E")
-                            {
-                                MessageBox.Show("Registro Eliminado exitosamente");
-                            }
-
-
-                            this.Close();
-
-
-                        }
-                        conecta.CerrarConexion();
-                    }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("No se han ingresado todos los datos necesarios para esta accion por favor verificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        bool ValidaResgistros()
-        {
-            bool res = true;
             try
             {
-                if (txtcodBodProducto.Text == "")
+
+                if (conecta.AbrirConexion() == true)
                 {
-                    res = false;
+                    int resultado = 0;
+                    Clases.Producto pProducto = new Clases.Producto();
+                    if (lblAccion.Text == "I")
+                    {
+                        pProducto.Cod_Producto = 0;
+                    }
+                    else
+                    {
+                        pProducto.Cod_Producto = Convert.ToInt32(txtCodProducto.Text);
+                    }
+                    pProducto.Nombre_Producto =txtNombreProducto.Text;
+                    pProducto.Cod_Bod_Producto = Convert.ToInt32(txtcodBodProducto.Text);
+                    pProducto.Sucursal_Bod_Producto = txtSucursalProducto.Text;
+                    pProducto.Cod_Prov_Producto = Convert.ToInt32( txtCodProvProducto.Text);
+                    pProducto.Nombre_Prov_Producto = txtNomProvProducto.Text;
+                    pProducto.Stock_Producto = Convert.ToInt32(txtStockProducto.Text)+ Convert.ToInt32(txtnuevoStock.Text);
+                    pProducto.Stock_Min_Producto = Convert.ToInt32(txtStockMinProducto.Text);
+                    pProducto.Precio_Compra_Producto = Convert.ToDouble(txtPrecioCompraProducto.Text);
+                    pProducto.Precio_Venta_Producto = Convert.ToDouble(txtPrecioVentaProducto.Text);
+                    pProducto.Fecha_Caduca_Producto = Convert.ToDateTime(dtpFechaCaducaProducto.Text);
+                    // si cobra IVa=0 No cobra iva=1
+                    if (cmbCobraIva.Text == "SI")
+                    {
+                        pProducto.Iva_Producto = 0;
+                    }
+                    else
+                    {
+                        pProducto.Iva_Producto = 1;
+                    }
+
+                    if (cmbEstado.Text == "Activo")
+                    {
+                        pProducto.Estado_Producto = 0;
+                    }
+                    else
+                    {
+                        pProducto.Estado_Producto = 1;
+                    }
+
+                    switch (lblAccion.Text)
+                    {
+
+                        case "I": resultado = Clases.Producto.AgregarProducto(conecta.conexion, pProducto); break;
+
+                        case "M": resultado = Clases.Producto.ModificarProducto(conecta.conexion, pProducto); break;
+
+                        case "E": resultado = Clases.Producto.EliminarProducto(conecta.conexion, pProducto.Cod_Producto); break;
+
+                    }
+
+
+                    if (resultado > 0)
+                    {
+                        if (lblAccion.Text == "I")
+                        {
+                            MessageBox.Show("Registro Ingresado exitosamente");
+                        }
+                        else if (lblAccion.Text == "M")
+                        {
+                            MessageBox.Show("Registro Actualizado exitosamente");
+                        }
+                        else if (lblAccion.Text == "E")
+                        {
+                            MessageBox.Show("Registro Eliminado exitosamente");
+                        }
+
+
+                        this.Close();
+
+
+                    }
+                    conecta.CerrarConexion();
                 }
-                else if (txtCodProvProducto.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtnuevoStock.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtStockMinProducto.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtNombreProducto.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtPrecioCompraProducto.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtPrecioVentaProducto.Text == "")
-                {
-                    res = false;
-                }
-                else if (cmbCobraIva.Text == "")
-                {
-                    res = false;
-                }
-                else if (cmbEstado.Text == "")
-                {
-                    res = false;
-                }
-                return res;
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
             }
-
         }
 
         private void txtnuevoStock_KeyPress(object sender, KeyPressEventArgs e)

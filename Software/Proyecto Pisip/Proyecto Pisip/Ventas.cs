@@ -14,7 +14,6 @@ namespace Proyecto_Pisip
     public partial class Ventas : Form
     {
         Clases.Conexion conecta = new Clases.Conexion();
-        Clases.Validacion valida = new Clases.Validacion();
         
         int filaSeleccionada, numFilas;
         double gSubTotal=0,gIva=0,gTotal=0;
@@ -391,21 +390,6 @@ namespace Proyecto_Pisip
             imprimirDetalleFactura detalleFactura = new imprimirDetalleFactura();
             detalleFactura.numeroFactura = numeroFatura;
             detalleFactura.ShowDialog();
-        }
-
-        private void txtPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            valida.soloNumero(e);
-        }
-
-        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            valida.soloNumero(e);
-        }
-
-        private void txtPorcentajeIVA_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            valida.soloNumero(e);
         }
 
         void VaciarEncabezado()

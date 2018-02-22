@@ -75,123 +75,78 @@ namespace Proyecto_Pisip
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (ValidaResgistros() == true)
-            {
-                try
-                {
-
-                    if (conecta.AbrirConexion() == true)
-                    {
-                        int resultado = 0;
-                        Clases.Empleado pEmpleado = new Clases.Empleado();
-                        if (lblAccion.Text == "I")
-                        {
-                            pEmpleado.Cod_Empleado = 0;
-                        }
-                        else
-                        {
-                            pEmpleado.Cod_Empleado = Convert.ToInt32(txtcodigo.Text);
-                        }
-                        //pEmpleado.Cod_Empleado =Convert.ToInt32(txtcodigo.Text);
-                        pEmpleado.Cod_Bodega = Convert.ToInt32(txtcodBodega.Text);
-                        pEmpleado.Cedula_Empleado = txtcedula.Text;
-                        pEmpleado.Apellidos_Empleado = txtapellidos.Text;
-                        pEmpleado.Nombres_Empleado = txtnombres.Text;
-                        pEmpleado.Cargo_Empleado = txtcargo.Text;
-                        //pEmpleado.Estado_empleado = Convert.ToInt16(txtestado.Text);
-                        if (cmbEstado.Text == "Activo")
-                        {
-                            pEmpleado.Estado_empleado = 0;
-                        }
-                        else
-                        {
-                            pEmpleado.Estado_empleado = 1;
-                        }
-
-                        switch (lblAccion.Text)
-                        {
-
-                            case "I": resultado = Clases.Empleado.AgregarEmpleado(conecta.conexion, pEmpleado); break;
-
-                            case "M": resultado = Clases.Empleado.ModificarEmpleado(conecta.conexion, pEmpleado); break;
-
-                            case "E": resultado = Clases.Empleado.EliminarEmpleado(conecta.conexion, pEmpleado.Cod_Empleado); break;
-
-                        }
-
-
-                        if (resultado > 0)
-                        {
-                            if (lblAccion.Text == "I")
-                            {
-                                MessageBox.Show("Registro Ingresado exitosamente");
-                            }
-                            else if (lblAccion.Text == "M")
-                            {
-                                MessageBox.Show("Registro Actualizado exitosamente");
-                            }
-                            else if (lblAccion.Text == "E")
-                            {
-                                MessageBox.Show("Registro Eliminado exitosamente");
-                            }
-
-
-                            this.Close();
-
-
-                        }
-                        conecta.CerrarConexion();
-                    }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se han ingresado todos los datos necesarios para esta accion por favor verificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
-        bool ValidaResgistros()
-        {
-            bool res = true;
             try
             {
-                if (txtcodBodega.Text == "")
+
+                if (conecta.AbrirConexion() == true)
                 {
-                    res = false;
+                    int resultado = 0;
+                    Clases.Empleado pEmpleado = new Clases.Empleado();
+                    if (lblAccion.Text == "I")
+                    {
+                        pEmpleado.Cod_Empleado = 0;
+                    }
+                    else
+                    {
+                        pEmpleado.Cod_Empleado = Convert.ToInt32(txtcodigo.Text);
+                    }
+                    //pEmpleado.Cod_Empleado =Convert.ToInt32(txtcodigo.Text);
+                    pEmpleado.Cod_Bodega = Convert.ToInt32(txtcodBodega.Text);
+                    pEmpleado.Cedula_Empleado = txtcedula.Text;
+                    pEmpleado.Apellidos_Empleado = txtapellidos.Text;
+                    pEmpleado.Nombres_Empleado = txtnombres.Text;
+                    pEmpleado.Cargo_Empleado = txtcargo.Text;
+                    //pEmpleado.Estado_empleado = Convert.ToInt16(txtestado.Text);
+                    if (cmbEstado.Text == "Activo")
+                    {
+                        pEmpleado.Estado_empleado = 0;
+                    }
+                    else
+                    {
+                        pEmpleado.Estado_empleado = 1;
+                    }
+
+                    switch (lblAccion.Text)
+                    {
+
+                        case "I": resultado = Clases.Empleado.AgregarEmpleado(conecta.conexion, pEmpleado); break;
+
+                        case "M": resultado = Clases.Empleado.ModificarEmpleado(conecta.conexion, pEmpleado); break;
+
+                        case "E": resultado = Clases.Empleado.EliminarEmpleado(conecta.conexion, pEmpleado.Cod_Empleado); break;
+
+                    }
+
+
+                    if (resultado > 0)
+                    {
+                        if (lblAccion.Text == "I")
+                        {
+                            MessageBox.Show("Registro Ingresado exitosamente");
+                        }
+                        else if (lblAccion.Text == "M")
+                        {
+                            MessageBox.Show("Registro Actualizado exitosamente");
+                        }
+                        else if (lblAccion.Text == "E")
+                        {
+                            MessageBox.Show("Registro Eliminado exitosamente");
+                        }
+
+
+                        this.Close();
+
+
+                    }
+                    conecta.CerrarConexion();
                 }
-                else if (txtcedula.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtapellidos.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtnombres.Text == "")
-                {
-                    res = false;
-                }
-                else if (txtcargo.Text == "")
-                {
-                    res = false;
-                }
-                else if (cmbEstado.Text == "")
-                {
-                    res = false;
-                }
-                return res;
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                return false;
             }
-
         }
+
         private void btnsalir_Click(object sender, EventArgs e)
         {
             this.Close();
