@@ -72,76 +72,123 @@ namespace Proyecto_Pisip
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidaResgistros() == true)
             {
-
-                if (conecta.AbrirConexion() == true)
+                try
                 {
-                    int resultado = 0;
-                    Clases.Proveedor pProveedor = new Clases.Proveedor();
-                    if (lblAccion.Text == "I")
+
+                    if (conecta.AbrirConexion() == true)
                     {
-                        pProveedor.Cod_Proveedor = 0;
-                    }
-                    else
-                    {
-                        pProveedor.Cod_Proveedor = Convert.ToInt32(txtCodigo.Text);
-                    }
-                    
-                    pProveedor.Ruc_Proveedor = txtRuc.Text;
-                    pProveedor.Nombre_Proveedor = txtProveedor.Text;
-                    pProveedor.Direccion_Proveedor = txtProveedor.Text;
-                    pProveedor.Fono_Proveedor = txtFono.Text;
-                    pProveedor.Contacto_Proveedor = txtContacto.Text;
-                    //pProveedor.Estado_Proveedor = Convert.ToInt16(txtEstado.Text);
-                    if (cmbEstado.Text == "Activo")
-                    {
-                        pProveedor.Estado_Proveedor = 0;
-                    }
-                    else
-                    {
-                        pProveedor.Estado_Proveedor = 1;
-                    }
-
-                    switch (lblAccion.Text)
-                    {
-
-                        case "I": resultado = Clases.Proveedor.AgregarProveedor(conecta.conexion, pProveedor); break;
-
-                        case "M": resultado = Clases.Proveedor.ModificarProveedor(conecta.conexion, pProveedor); break;
-
-                        case "E": resultado = Clases.Proveedor.EliminarProveedor(conecta.conexion, pProveedor.Cod_Proveedor); break;
-
-                    }
-
-
-                    if (resultado > 0)
-                    {
+                        int resultado = 0;
+                        Clases.Proveedor pProveedor = new Clases.Proveedor();
                         if (lblAccion.Text == "I")
                         {
-                            MessageBox.Show("Registro Ingresado exitosamente");
+                            pProveedor.Cod_Proveedor = 0;
                         }
-                        else if (lblAccion.Text == "M")
+                        else
                         {
-                            MessageBox.Show("Registro Actualizado exitosamente");
+                            pProveedor.Cod_Proveedor = Convert.ToInt32(txtCodigo.Text);
                         }
-                        else if (lblAccion.Text == "E")
+
+                        pProveedor.Ruc_Proveedor = txtRuc.Text;
+                        pProveedor.Nombre_Proveedor = txtProveedor.Text;
+                        pProveedor.Direccion_Proveedor = txtProveedor.Text;
+                        pProveedor.Fono_Proveedor = txtFono.Text;
+                        pProveedor.Contacto_Proveedor = txtContacto.Text;
+                        //pProveedor.Estado_Proveedor = Convert.ToInt16(txtEstado.Text);
+                        if (cmbEstado.Text == "Activo")
                         {
-                            MessageBox.Show("Registro Eliminado exitosamente");
+                            pProveedor.Estado_Proveedor = 0;
+                        }
+                        else
+                        {
+                            pProveedor.Estado_Proveedor = 1;
+                        }
+
+                        switch (lblAccion.Text)
+                        {
+
+                            case "I": resultado = Clases.Proveedor.AgregarProveedor(conecta.conexion, pProveedor); break;
+
+                            case "M": resultado = Clases.Proveedor.ModificarProveedor(conecta.conexion, pProveedor); break;
+
+                            case "E": resultado = Clases.Proveedor.EliminarProveedor(conecta.conexion, pProveedor.Cod_Proveedor); break;
+
                         }
 
 
-                        this.Close();
+                        if (resultado > 0)
+                        {
+                            if (lblAccion.Text == "I")
+                            {
+                                MessageBox.Show("Registro Ingresado exitosamente");
+                            }
+                            else if (lblAccion.Text == "M")
+                            {
+                                MessageBox.Show("Registro Actualizado exitosamente");
+                            }
+                            else if (lblAccion.Text == "E")
+                            {
+                                MessageBox.Show("Registro Eliminado exitosamente");
+                            }
 
 
+                            this.Close();
+
+
+                        }
+                        conecta.CerrarConexion();
                     }
-                    conecta.CerrarConexion();
                 }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
-            catch (MySqlException ex)
+            else
+            {
+                MessageBox.Show("No se han ingresado todos los datos necesarios para esta accion por favor verificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        bool ValidaResgistros()
+        {
+            bool res = true;
+            try
+            {
+                if (txtRuc.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtProveedor.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtContacto.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtDireccion.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtFono.Text == "")
+                {
+                    res = false;
+                }
+                else if (cmbEstado.Text == "")
+                {
+                    res = false;
+                }
+                return res;
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
             }
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

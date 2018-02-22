@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCambiar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.txtClaveActual = new System.Windows.Forms.TextBox();
-            this.txtClaveNueva = new System.Windows.Forms.TextBox();
-            this.txtComfirmaClave = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblclave = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.lblPrimeraVez = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblclave = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtComfirmaClave = new System.Windows.Forms.TextBox();
+            this.txtClaveNueva = new System.Windows.Forms.TextBox();
+            this.txtClaveActual = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnCambiar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,90 @@
             this.panel1.Size = new System.Drawing.Size(311, 128);
             this.panel1.TabIndex = 0;
             // 
+            // lblPrimeraVez
+            // 
+            this.lblPrimeraVez.AutoSize = true;
+            this.lblPrimeraVez.Location = new System.Drawing.Point(3, 10);
+            this.lblPrimeraVez.Name = "lblPrimeraVez";
+            this.lblPrimeraVez.Size = new System.Drawing.Size(35, 13);
+            this.lblPrimeraVez.TabIndex = 8;
+            this.lblPrimeraVez.Text = "label4";
+            this.lblPrimeraVez.Visible = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(101, 10);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.TabIndex = 7;
+            this.lblUsuario.Text = "label4";
+            this.lblUsuario.Visible = false;
+            // 
+            // lblclave
+            // 
+            this.lblclave.AutoSize = true;
+            this.lblclave.Location = new System.Drawing.Point(205, 10);
+            this.lblclave.Name = "lblclave";
+            this.lblclave.Size = new System.Drawing.Size(35, 13);
+            this.lblclave.TabIndex = 6;
+            this.lblclave.Text = "label4";
+            this.lblclave.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(55, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Confirmar Clave";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Clave Nueva";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Clave Actual";
+            // 
+            // txtComfirmaClave
+            // 
+            this.txtComfirmaClave.Location = new System.Drawing.Point(165, 82);
+            this.txtComfirmaClave.MaxLength = 10;
+            this.txtComfirmaClave.Name = "txtComfirmaClave";
+            this.txtComfirmaClave.PasswordChar = '*';
+            this.txtComfirmaClave.Size = new System.Drawing.Size(75, 20);
+            this.txtComfirmaClave.TabIndex = 2;
+            // 
+            // txtClaveNueva
+            // 
+            this.txtClaveNueva.Location = new System.Drawing.Point(165, 55);
+            this.txtClaveNueva.MaxLength = 10;
+            this.txtClaveNueva.Name = "txtClaveNueva";
+            this.txtClaveNueva.PasswordChar = '*';
+            this.txtClaveNueva.Size = new System.Drawing.Size(75, 20);
+            this.txtClaveNueva.TabIndex = 1;
+            // 
+            // txtClaveActual
+            // 
+            this.txtClaveActual.Location = new System.Drawing.Point(165, 28);
+            this.txtClaveActual.MaxLength = 10;
+            this.txtClaveActual.Name = "txtClaveActual";
+            this.txtClaveActual.PasswordChar = '*';
+            this.txtClaveActual.Size = new System.Drawing.Size(75, 20);
+            this.txtClaveActual.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -71,18 +155,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(311, 65);
             this.panel2.TabIndex = 1;
-            // 
-            // btnCambiar
-            // 
-            this.btnCambiar.Image = global::Proyecto_Pisip.Properties.Resources.cambiarclave1;
-            this.btnCambiar.Location = new System.Drawing.Point(22, 7);
-            this.btnCambiar.Name = "btnCambiar";
-            this.btnCambiar.Size = new System.Drawing.Size(75, 53);
-            this.btnCambiar.TabIndex = 0;
-            this.btnCambiar.Text = "Cambiar";
-            this.btnCambiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCambiar.UseVisualStyleBackColor = true;
-            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
             // 
             // btnSalir
             // 
@@ -96,86 +168,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // txtClaveActual
+            // btnCambiar
             // 
-            this.txtClaveActual.Location = new System.Drawing.Point(165, 28);
-            this.txtClaveActual.MaxLength = 10;
-            this.txtClaveActual.Name = "txtClaveActual";
-            this.txtClaveActual.PasswordChar = '*';
-            this.txtClaveActual.Size = new System.Drawing.Size(75, 20);
-            this.txtClaveActual.TabIndex = 0;
-            // 
-            // txtClaveNueva
-            // 
-            this.txtClaveNueva.Location = new System.Drawing.Point(165, 55);
-            this.txtClaveNueva.MaxLength = 10;
-            this.txtClaveNueva.Name = "txtClaveNueva";
-            this.txtClaveNueva.PasswordChar = '*';
-            this.txtClaveNueva.Size = new System.Drawing.Size(75, 20);
-            this.txtClaveNueva.TabIndex = 1;
-            // 
-            // txtComfirmaClave
-            // 
-            this.txtComfirmaClave.Location = new System.Drawing.Point(165, 82);
-            this.txtComfirmaClave.MaxLength = 10;
-            this.txtComfirmaClave.Name = "txtComfirmaClave";
-            this.txtComfirmaClave.PasswordChar = '*';
-            this.txtComfirmaClave.Size = new System.Drawing.Size(75, 20);
-            this.txtComfirmaClave.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Clave Actual";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Clave Nueva";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Confirmar Clave";
-            // 
-            // lblclave
-            // 
-            this.lblclave.AutoSize = true;
-            this.lblclave.Location = new System.Drawing.Point(205, 10);
-            this.lblclave.Name = "lblclave";
-            this.lblclave.Size = new System.Drawing.Size(35, 13);
-            this.lblclave.TabIndex = 6;
-            this.lblclave.Text = "label4";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(101, 10);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
-            this.lblUsuario.TabIndex = 7;
-            this.lblUsuario.Text = "label4";
-            // 
-            // lblPrimeraVez
-            // 
-            this.lblPrimeraVez.AutoSize = true;
-            this.lblPrimeraVez.Location = new System.Drawing.Point(3, 10);
-            this.lblPrimeraVez.Name = "lblPrimeraVez";
-            this.lblPrimeraVez.Size = new System.Drawing.Size(35, 13);
-            this.lblPrimeraVez.TabIndex = 8;
-            this.lblPrimeraVez.Text = "label4";
+            this.btnCambiar.Image = global::Proyecto_Pisip.Properties.Resources.cambiarclave1;
+            this.btnCambiar.Location = new System.Drawing.Point(22, 7);
+            this.btnCambiar.Name = "btnCambiar";
+            this.btnCambiar.Size = new System.Drawing.Size(75, 53);
+            this.btnCambiar.TabIndex = 0;
+            this.btnCambiar.Text = "Cambiar";
+            this.btnCambiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCambiar.UseVisualStyleBackColor = true;
+            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
             // 
             // CambioLogin
             // 

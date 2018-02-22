@@ -80,7 +80,7 @@
             // 
             // txtCodRol
             // 
-            this.txtCodRol.Location = new System.Drawing.Point(225, 173);
+            this.txtCodRol.Location = new System.Drawing.Point(225, 190);
             this.txtCodRol.Name = "txtCodRol";
             this.txtCodRol.Size = new System.Drawing.Size(37, 20);
             this.txtCodRol.TabIndex = 38;
@@ -189,6 +189,7 @@
             this.txtClaveUsu.Location = new System.Drawing.Point(100, 120);
             this.txtClaveUsu.MaxLength = 10;
             this.txtClaveUsu.Name = "txtClaveUsu";
+            this.txtClaveUsu.PasswordChar = '*';
             this.txtClaveUsu.Size = new System.Drawing.Size(61, 20);
             this.txtClaveUsu.TabIndex = 28;
             // 

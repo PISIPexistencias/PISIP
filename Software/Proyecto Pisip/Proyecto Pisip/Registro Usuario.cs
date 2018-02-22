@@ -105,69 +105,112 @@ namespace Proyecto_Pisip
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
+            if (ValidaResgistros() == true)
+            {
+                try
+                {
+
+                    if (conecta.AbrirConexion() == true)
+                    {
+                        int resultado = 0, resultado1 = 0;
+                        Clases.Usuario pUsuario = new Clases.Usuario();
+                        pUsuario.Cod_Usuario = txtcodigo.Text;
+                        pUsuario.Cod_Empl_Usuario = Convert.ToInt32(txtCodEmpleado.Text);
+                        pUsuario.Apellido_Empl_Usuario = txtApellidoUsu.Text;
+                        pUsuario.Nombre_Empl_Usuario = txtNombreUsu.Text;
+                        pUsuario.Clave_Usuario = txtClaveUsu.Text;
+                        pUsuario.Perfil_Rol_Usuario = cmbRol.DisplayMember;
+                        pUsuario.CodRol_Usuario = Convert.ToInt16(cmbRol.SelectedValue);
+                        if (cmbEstado.Text == "Activo")
+                        {
+                            pUsuario.Estado_Usuario = 0;
+                        }
+                        else
+                        {
+                            pUsuario.Estado_Usuario = 1;
+                        }
+
+                        switch (lblAccion.Text)
+                        {
+
+                            case "I": resultado = Clases.Usuario.AgregarUsuario(conecta.conexion, pUsuario); resultado1 = Clases.Usuario.AgregarRolUsuario(conecta.conexion, pUsuario.Cod_Usuario, pUsuario.CodRol_Usuario); break;
+
+                            case "M": resultado = Clases.Usuario.ModificarUsuario(conecta.conexion, pUsuario); resultado1 = Clases.Usuario.ModificarRolUsuario(conecta.conexion, pUsuario.Cod_Usuario, pUsuario.CodRol_Usuario); break;
+
+                            case "E": resultado = Clases.Usuario.EliminarUsuario(conecta.conexion, pUsuario.Cod_Usuario); resultado1 = Clases.Usuario.EliminarRolUsuario(conecta.conexion, pUsuario.Cod_Usuario); break;
+
+                        }
+
+
+                        if ((resultado > 0) && (resultado1 > 0))
+                        {
+                            if (lblAccion.Text == "I")
+                            {
+                                MessageBox.Show("Registro Ingresado exitosamente");
+                            }
+                            else if (lblAccion.Text == "M")
+                            {
+                                MessageBox.Show("Registro Actualizado exitosamente");
+                            }
+                            else if (lblAccion.Text == "E")
+                            {
+                                MessageBox.Show("Registro Eliminado exitosamente");
+                            }
+
+
+                            this.Close();
+
+
+                        }
+                        conecta.CerrarConexion();
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    this.Close();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("No se han ingresado todos los datos necesarios para esta accion por favor verificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        bool ValidaResgistros()
+        {
+            bool res = true;
             try
             {
-
-                if (conecta.AbrirConexion() == true)
+                if (txtcodigo.Text == "")
                 {
-                    int resultado = 0, resultado1 = 0;
-                    Clases.Usuario pUsuario = new Clases.Usuario();
-                    pUsuario.Cod_Usuario = txtcodigo.Text;
-                    pUsuario.Cod_Empl_Usuario = Convert.ToInt32(txtCodEmpleado.Text);
-                    pUsuario.Apellido_Empl_Usuario = txtApellidoUsu.Text;
-                    pUsuario.Nombre_Empl_Usuario = txtNombreUsu.Text;
-                    pUsuario.Clave_Usuario = txtClaveUsu.Text;
-                    pUsuario.Perfil_Rol_Usuario = cmbRol.DisplayMember;
-                    pUsuario.CodRol_Usuario=Convert.ToInt16( cmbRol.SelectedValue);
-                    if (cmbEstado.Text == "Activo")
-                    {
-                        pUsuario.Estado_Usuario = 0;
-                    }
-                    else
-                    {
-                        pUsuario.Estado_Usuario = 1;
-                    }
-
-                    switch (lblAccion.Text)
-                    {
-
-                        case "I": resultado = Clases.Usuario.AgregarUsuario(conecta.conexion, pUsuario); resultado1 = Clases.Usuario.AgregarRolUsuario(conecta.conexion, pUsuario.Cod_Usuario, pUsuario.CodRol_Usuario); break;
-
-                        case "M": resultado = Clases.Usuario.ModificarUsuario(conecta.conexion, pUsuario); resultado1 = Clases.Usuario.ModificarRolUsuario(conecta.conexion, pUsuario.Cod_Usuario, pUsuario.CodRol_Usuario); break;
-
-                        case "E": resultado = Clases.Usuario.EliminarUsuario(conecta.conexion, pUsuario.Cod_Usuario); resultado1 = Clases.Usuario.EliminarRolUsuario(conecta.conexion, pUsuario.Cod_Usuario); break;
-
-                    }
-
-
-                    if ((resultado > 0) && (resultado1 > 0))
-                    {
-                        if (lblAccion.Text == "I")
-                        {
-                            MessageBox.Show("Registro Ingresado exitosamente");
-                        }
-                        else if (lblAccion.Text == "M")
-                        {
-                            MessageBox.Show("Registro Actualizado exitosamente");
-                        }
-                        else if (lblAccion.Text == "E")
-                        {
-                            MessageBox.Show("Registro Eliminado exitosamente");
-                        }
-
-
-                        this.Close();
-
-
-                    }
-                    conecta.CerrarConexion();
+                    res = false;
                 }
+                else if (txtCodEmpleado.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtClaveUsu.Text == "")
+                {
+                    res = false;
+                }
+                else if (cmbRol.Text == "")
+                {
+                    res = false;
+                }
+                else if (cmbEstado.Text == "")
+                {
+                    res = false;
+                }
+                
+                return res;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                this.Close();
+                return false;
             }
+
         }
 
         private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)

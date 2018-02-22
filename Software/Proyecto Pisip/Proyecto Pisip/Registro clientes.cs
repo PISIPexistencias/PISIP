@@ -66,68 +66,111 @@ namespace Proyecto_Pisip
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            
-            try
+            if (ValidaResgistros() == true)
             {
-                
-                if (conecta.AbrirConexion() == true)
+                try
                 {
-                    int resultado=0;
-                    Clases.Cliente pCliente = new Clases.Cliente();
-                    if (lblAccion.Text == "I")
+
+                    if (conecta.AbrirConexion() == true)
                     {
-                        pCliente.Id_Cliente = 0;
-                    }
-                    else
-                    {
-                        pCliente.Id_Cliente = Convert.ToInt32(txtcodigo.Text);
-                    }
-                    
-                    pCliente.Cedula_Cliente = txtcedula.Text;
-                    pCliente.Apellidos_Cliente = txtapellidos.Text;
-                    pCliente.Nombres_Cliente = txtnombres.Text;
-                    pCliente.Correo_Cliente = txtmail.Text;
-                    pCliente.Direccion_Cliente = txtdireccion.Text;
-                    pCliente.Telefono_Cliente = Convert.ToDouble(txttelefono.Text);
-
-
-                    switch (lblAccion.Text)
-                    {
-
-                        case "I": resultado = Clases.Cliente.AgregarCliente(conecta.conexion, pCliente); break;
-
-                        case "M": resultado = Clases.Cliente.ModificarCliente(conecta.conexion, pCliente); break;
-
-                        case "E": resultado = Clases.Cliente.EliminarCliente (conecta.conexion, pCliente.Id_Cliente); break;
-
-                    }
-
-                    
-                    if (resultado> 0)
-                    {
+                        int resultado = 0;
+                        Clases.Cliente pCliente = new Clases.Cliente();
                         if (lblAccion.Text == "I")
                         {
-                            MessageBox.Show("Registro Ingresado exitosamente");
-                        }else if (lblAccion.Text == "M")
-                        {
-                            MessageBox.Show("Registro Actualizado exitosamente");
-                        }else if (lblAccion.Text == "E")
-                        {
-                            MessageBox.Show("Registro Eliminado exitosamente");
+                            pCliente.Id_Cliente = 0;
                         }
-                        
-                        
-                        this.Close();
-                       
+                        else
+                        {
+                            pCliente.Id_Cliente = Convert.ToInt32(txtcodigo.Text);
+                        }
 
+                        pCliente.Cedula_Cliente = txtcedula.Text;
+                        pCliente.Apellidos_Cliente = txtapellidos.Text;
+                        pCliente.Nombres_Cliente = txtnombres.Text;
+                        pCliente.Correo_Cliente = txtmail.Text;
+                        pCliente.Direccion_Cliente = txtdireccion.Text;
+                        pCliente.Telefono_Cliente = Convert.ToDouble(txttelefono.Text);
+
+
+                        switch (lblAccion.Text)
+                        {
+
+                            case "I": resultado = Clases.Cliente.AgregarCliente(conecta.conexion, pCliente); break;
+
+                            case "M": resultado = Clases.Cliente.ModificarCliente(conecta.conexion, pCliente); break;
+
+                            case "E": resultado = Clases.Cliente.EliminarCliente(conecta.conexion, pCliente.Id_Cliente); break;
+
+                        }
+
+
+                        if (resultado > 0)
+                        {
+                            if (lblAccion.Text == "I")
+                            {
+                                MessageBox.Show("Registro Ingresado exitosamente");
+                            }
+                            else if (lblAccion.Text == "M")
+                            {
+                                MessageBox.Show("Registro Actualizado exitosamente");
+                            }
+                            else if (lblAccion.Text == "E")
+                            {
+                                MessageBox.Show("Registro Eliminado exitosamente");
+                            }
+
+
+                            this.Close();
+
+
+                        }
+                        conecta.CerrarConexion();
                     }
-                    conecta.CerrarConexion();
                 }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
-            catch (MySqlException ex)
+            else
+            {
+                MessageBox.Show("No se han ingresado todos los datos necesarios para esta accion por favor verificar","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        bool ValidaResgistros()
+        {
+            bool res = true;
+            try
+            {
+                if (txtapellidos.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtnombres.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtdireccion.Text == "")
+                {
+                    res = false;
+                }
+                else if (txtmail.Text == "")
+                {
+                    res = false;
+                }
+                else if (txttelefono.Text == "")
+                {
+                    res = false;
+                }
+                return res;
+            }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
             }
+
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
@@ -164,5 +207,7 @@ namespace Proyecto_Pisip
         {
 
         }
+     
+       
     }
 }
